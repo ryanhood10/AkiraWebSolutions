@@ -60,12 +60,12 @@ const Engagement = () => {
                     ref={contentRef}
                     className={`flex flex-col justify-center ${animationClasses(contentIsVisible)}`}
                 >
-                    <p className="text-[#00df9a] font-bold"> SEAVER MARKETING GROUP </p>
+                    <p className="text-[#FF0033] font-bold"> Akira Web Solutions </p>
                     <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Our Solutions</h1>
                     <p> 
                         Welcome to a world of comprehensive solutions designed to lead you to a successful business journey. Together, we will craft meaningful connections with targeted email campaigns that resonate. Elevate your online presence and visibility with powerful Search Engine Optimization techniques. As well as, our specialization in web solutions focuses on building websites that capture your brand essence. Choose us to embark on a growth-oriented journey that starts with precise email campaigns, impactful SEO, and expertly crafted websites.
                     </p>
-                    <button onClick={handleViewSolutions} className="bg-black w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-[#00df9a]">Learn More</button>
+                    <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Learn More</button>
                 </div>
             </div>
         </div>
