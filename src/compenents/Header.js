@@ -17,7 +17,7 @@ const Header = () => {
     <header>
       <nav className='flex justify-between items-center h-24 max-w-[1240px] mx-auto text-white'>
         <h1 className='text-3xl font-bold text-[#FF0033] m-4'> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Akira Web Solutions</h1>
-        <ul className='hidden md:flex'>
+        <ul className='hidden md:flex text-black'>
           <li className='p-4' >
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
               Home
@@ -60,8 +60,8 @@ const Header = () => {
         <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500 text-black  z-50' : "fixed left-[-100%]"}>
                   <h1 className='w-full text-xl font-bold text-[#FF0033] m-4'> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Akira Web Solutions</h1>
 
-          <ul className='pt-12 uppercase'>
-        <li className='p-4 border-b border-gray-600' >
+          <ul className='pt-12 uppercase text-black'>
+        <li className='p-4 border-b  border-gray-600' >
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
               Home
             </Link>

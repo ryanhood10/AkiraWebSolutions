@@ -79,14 +79,14 @@ const NewsLetter = () => {
         `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;
 
     return (
-        <div ref={newsletterRef} className={`w-full py-8 md:py-16 text-white px-4 ${animationClasses(newsletterVisible)}`}>
+        <div ref={newsletterRef} className={`w-full py-8 md:py-16  px-4 ${animationClasses(newsletterVisible)}`}>
             <div className="max-w-[1240px] mx-auto grid"> 
                 <div className="">
                     <h1 className="text-xl md:text-2xl lg:text-4xl font-bold py-1 md:py-2"> Want to earn more revenue and reach more clients?  </h1>
                     <p>Send us a message!</p>
                 </div>
                 <div className="my-2 md:my-4">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center bg-gray-50">
                         <form className="w-full" onSubmit={handleSubmit}>
                             <h3>Contact</h3>
                             {['name', 'email', 'message'].map((field) => (
@@ -98,7 +98,7 @@ const NewsLetter = () => {
                                             id={field}
                                             name={field}
                                             placeholder={field[0].toUpperCase() + field.slice(1)}
-                                            className='p-2 md:p-3 flex w-full rounded-md text-black'
+                                            className='p-2 md:p-3 flex w-full rounded-md bg-gray-200 text-black'
                                             value={formData[field]}
                                             onChange={handleInputChange}
                                             required
@@ -106,7 +106,7 @@ const NewsLetter = () => {
                                     ) : (
                                         <textarea
                                             placeholder="Message"
-                                            className='p-2 md:p-3 min-h-[100px] md:min-h-[200px] flex w-full rounded-md text-black'
+                                            className='p-2 md:p-3 min-h-[100px] md:min-h-[200px] flex w-full rounded-md text-black bg-gray-200'
                                             name="message"
                                             id="message"
                                             value={formData.message}
@@ -117,12 +117,12 @@ const NewsLetter = () => {
                                     {errors[field] && <span className="error">{errors[field]}</span>}
                                 </div>
                             ))}
-                            <button type="submit" className="bg-[#00df9a] w-[200px] rounded-md font-medium my-3 md:my-6 mx-auto py-2 md:py-3 text-black">Send Email</button>
+                            <button type="submit" className="bg-[#FF0033] w-[200px] rounded-md font-medium my-3 md:my-6 mx-auto py-2 md:py-3 text-black">Send Email</button>
                         </form>
                     </div>
                     <p className="text-sm md:text-base">
                         Learn more about our established techniques on our{" "}
-                        <Link to="/solutions" className="text-[#00df9a]">
+                        <Link to="/solutions" className="text-[#FF0033]">
                             Solutions
                         </Link>{" "}
                         page.
