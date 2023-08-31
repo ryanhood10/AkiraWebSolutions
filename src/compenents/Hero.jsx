@@ -14,7 +14,6 @@ const Hero = () => {
     return (
         <div className="">
             <div className="pt-12 max-w-[800px] mt-[-96px] w-full h-[50vh]  mx-auto text-center flex flex-col justify-center">
-                <p className="py-12 text-[#FF0033] text-l font-bold p-2"> <br></br></p> 
                 <p className="md:text-5xl sm:text-4xl text-xl font-bold pt-16">Grow with Data</p>
                 <div>
                 <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold">Find your Web Solutions</h1>                   

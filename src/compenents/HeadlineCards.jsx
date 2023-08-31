@@ -50,30 +50,30 @@ const HeadlineCards = () => {
         `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;
 
     return (
-        <div className='mx-w-[1640px] mx-auto p-4 py-12 px-4 grid md:grid-cols-3 gap-6'>
-            {/* Card 1 */}
-            <div ref={card1Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card1Visible)}`}>
+        <div className='mx-w-[1640px] mx-auto p-4 py-12 px-4 grid md:grid-cols-2 gap-6'>
+            {/* Card 3 */}
+            <div ref={card3Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card3Visible)}`}>
                 <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p className='font-bold text-2xl px-2 pt-4'>See Customer</p>
-                    <p className='px-2'>Testimonials</p>
-                    <button className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black" onClick={handleViewTestimonials}>View Now</button>
+                    <p className='font-bold text-2xl px-2 pt-4'>Premium Websites</p>
+                    <p className='px-2'>Customized Solutions</p>
+                    <p className='px-2'>Increased Visibility with SEO</p>
+                    <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">Our Work</button>
                 </div>
-                <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={CustomerTestimonials} alt='Customer Testimonials' />
+                <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={react1} alt='Premium Websites' />
             </div>
 
             {/* Card 2 */}
             <div ref={card2Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card2Visible)}`}>
                 <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
                     <p className='font-bold text-2xl px-2 pt-4'>Web Solutions</p>
-                    <p className='px-2'>Custom Website Build</p>
+                    <p className='px-2'>Responsive Customer Service Chatbots</p>
                     <p className='px-2'>Application Development</p>
-                    <p className='px-2'>Search Engine Optimization</p>
                     <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
                 </div>
                 <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={Market1} alt='Marketing Solutions' />
             </div>
 
-            {/* Card 3 */}
+            {/* Card 3
             <div ref={card3Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card3Visible)}`}>
                 <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
                     <p className='font-bold text-2xl px-2 pt-4'>Premium Websites</p>
@@ -81,7 +81,7 @@ const HeadlineCards = () => {
                     <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
                 </div>
                 <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={react1} alt='Premium Websites' />
-            </div>
+            </div> */}
         </div>
     );
 }

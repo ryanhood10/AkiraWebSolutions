@@ -46,7 +46,7 @@ function Footer() {
                     <nav>
                         <ul className="flex justify-between md:w-[75%] my-6">
                             <li>
-                                <Link to="https://www.linkedin.com/company/seaver-marketing-group/about/">
+                                <Link to="https://www.linkedin.com/company/akira-web-solutions/">
                                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                                 </Link>
                             </li>

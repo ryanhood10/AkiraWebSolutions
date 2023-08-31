@@ -70,8 +70,8 @@ const Engagement = () => {
                     >
                         <p className="text-center text-gray-500 font-bold"> Akira Web Solutions </p>
                         <h1 className="text-center md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Our Solutions</h1>
-                            <ul className="text-xl">
-                                <li>
+                            <ul className="text-xl ">
+                                <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
                                     <strong className={`text-xl font-bold transition-all duration-[2s] ${colorTransition ? 'text-[#FF0033]' : 'text-black'}`}>
                                         <span className={`${colorTransition ? 'text-2xl duration-[2s]' : ''}`}> <img className="h-12 inline-block" src={LaptopIcon} alt="Laptop Icon" ></img>Custom Website Builds</span>
                                     </strong> 
@@ -81,7 +81,7 @@ const Engagement = () => {
                                      From streamlined landing pages to intricate online storefronts and API integrations, our solutions scale with your needs. Elevate your digital presence and adapt with growth, ensuring both style and functionality are at the forefront.
                                 </li>
                                 <br></br>
-                                <li>
+                                <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
                                     <strong className={`text-xl font-bold transition-all duration-[3s] ${colorTransition ? 'text-[#FF0033]' : 'text-black'}`}>
                                         <span className={`${colorTransition ? 'text-2xl duration-[3s]' : ''}`}> <img className="h-12 inline-block" src={SearchEngine} alt="Search Engine" ></img>Search Engine Optimization</span>
                                     </strong> 
@@ -89,7 +89,7 @@ const Engagement = () => {
                                     Our specialized SEO services are designed to boost your online visibility, ensuring your business consistently achieves higher rankings on search engines.
                                 </li>
                                 <br></br>
-                                <li>
+                                <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
                                     <strong className={`text-xl font-bold transition-all duration-[4s] ${colorTransition ? 'text-[#FF0033]' : 'text-black'}`}>
                                         <span className={`${colorTransition ? 'text-2xl duration-[4s]' : ''}`}> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Customer Service Chatbots</span>
                                     </strong> 

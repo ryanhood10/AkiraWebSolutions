@@ -11,6 +11,7 @@ import OtherHero from './compenents/OtherHero';
 import Solutions from './compenents/Solutions'
 import Calendly from './compenents/Calandly';
 import BookAMeeting from './compenents/BookAMeeting';
+import OurPartners from './compenents/OurPartners';
 import './index.css';
 
 
@@ -40,6 +41,8 @@ function App() {
         <BookAMeeting />
         <Calendly />
         <NewsLetter />
+        <Footer />
+        <OurPartners />
             </React.Fragment>
             }
           />
@@ -48,6 +51,7 @@ function App() {
             element={ <React.Fragment>
                 <OtherHero />
                 <TestimonialsPage />
+                <Footer />
                 </React.Fragment>
             }
           />
@@ -59,6 +63,7 @@ function App() {
               <BookAMeeting />
               <Calendly />
               <NewsLetter />
+              <Footer />
             </React.Fragment>}
           />
           <Route
@@ -68,11 +73,11 @@ function App() {
               <BookAMeeting />
               <Calendly />
               <NewsLetter />
+              <Footer />
             </React.Fragment>}
           />
           
         </Routes>
-        <Footer />
       </div>
     </Router>
   );

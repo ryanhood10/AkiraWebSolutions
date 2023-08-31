@@ -82,8 +82,10 @@ const NewsLetter = () => {
         <div ref={newsletterRef} className={`w-full py-8 md:py-16  px-4 ${animationClasses(newsletterVisible)}`}>
             <div className="max-w-[1240px] mx-auto grid"> 
                 <div className="">
-                    <h1 className="text-xl md:text-2xl lg:text-4xl font-bold py-1 md:py-2"> Want to earn more revenue and reach more clients?  </h1>
-                    <p>Send us a message!</p>
+                    <h1 className="text-xl md:text-2xl lg:text-4xl font-bold py-1 md:py-2">🤖 Want to enhance efficiency and elevate customer satisfaction with a chatbot?
+                    <br></br>
+                    🤖 Need website or application developed that boosts your online presence? </h1>
+                    <p>See how we can improve your business and save you time!</p>
                 </div>
                 <div className="my-2 md:my-4">
                     <div className="flex flex-col items-center bg-gray-50">
