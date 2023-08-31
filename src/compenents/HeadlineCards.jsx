@@ -64,8 +64,9 @@ const HeadlineCards = () => {
             {/* Card 2 */}
             <div ref={card2Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card2Visible)}`}>
                 <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p className='font-bold text-2xl px-2 pt-4'>Marketing Solutions</p>
-                    <p className='px-2'>Email Marketing Campaigns</p>
+                    <p className='font-bold text-2xl px-2 pt-4'>Web Solutions</p>
+                    <p className='px-2'>Custom Website Build</p>
+                    <p className='px-2'>Application Development</p>
                     <p className='px-2'>Search Engine Optimization</p>
                     <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
                 </div>

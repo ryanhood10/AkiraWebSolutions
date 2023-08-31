@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import AkiraLogo from './assets/pictures/AkiraLogo.png'
+import AkiraLogo from './assets/pictures/AkiraLogo2.png'
 
 const Header = () => {
   const location = useLocation();

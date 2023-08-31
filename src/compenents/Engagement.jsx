@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Laptop from "./assets/pictures/MarkingImage2.png";
+import Engagement1 from "./assets/pictures/Engagment1.png";
 import { useNavigate } from 'react-router-dom';
 import AkiraLogo from './assets/pictures/AkiraLogo.png';
 import LaptopIcon from './assets/pictures/laptopicon.png';
@@ -61,14 +61,14 @@ const Engagement = () => {
                     <img 
                         ref={imgRef}
                         className={`w-[500px]  mx-auto my-4 rounded-xl ${animationClasses(imgIsVisible)}`} 
-                        src={Laptop} 
+                        src={Engagement1} 
                         alt="/" 
                     />
                     <div 
                         ref={contentRef}
                         className={`flex flex-col justify-center ${animationClasses(contentIsVisible)}`}
                     >
-                        <p className="text-center text-purple-500 font-bold"> Akira Web Solutions </p>
+                        <p className="text-center text-gray-500 font-bold"> Akira Web Solutions </p>
                         <h1 className="text-center md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Our Solutions</h1>
                             <ul className="text-xl">
                                 <li>

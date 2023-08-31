@@ -15,14 +15,14 @@ const Hero = () => {
         <div className="">
             <div className="pt-12 max-w-[800px] mt-[-96px] w-full h-[50vh]  mx-auto text-center flex flex-col justify-center">
                 <p className="py-12 text-[#FF0033] text-l font-bold p-2"> <br></br></p> 
-                <p className="md:text-5xl sm:text-4xl text-xl font-bold pt-4">Grow with Data</p>
+                <p className="md:text-5xl sm:text-4xl text-xl font-bold pt-16">Grow with Data</p>
                 <div>
-                <h1 className="pt-12 md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">Find your Web Solutions</h1>                   
+                <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold">Find your Web Solutions</h1>                   
                 </div>
                 <p className="md:text-2xl text-xl font-bold text-gray-500 md:pl-4 pl-2">
                     <Typed 
                         strings={[
-                            'Elevate your online footprint with a dynamic website, seamlessly integrating the latest technologies to drive business growth and success. <br/><br/> Enhance customer experience while saving time and resources. Trust us to deploy and manage an efficient Customer Service Chatbot Assistant for your needs.'
+                            'Boost your online presence with our dynamic web solutions. Enhance user experience, save resources, and leverage our expertise in chatbot integration for business growth.'
                         ]}
                         startDelay={600}
                         typeSpeed={10}
@@ -33,7 +33,7 @@ const Hero = () => {
                             '🤖'
                         ]}
                         typeSpeed={5}
-                        startDelay={10000}
+                        startDelay={5000}
                         showCursor={false}
                     />
                 </p>
