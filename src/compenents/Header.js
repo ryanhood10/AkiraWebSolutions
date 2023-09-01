@@ -36,7 +36,7 @@ const Header = () => {
               to="/testimonials"
               className={location.pathname === '/news' ? 'active' : ''}
             >
-              Testimonials
+              Case Studies
             </Link>
           </li>
           <li className='p-4'>
@@ -79,7 +79,7 @@ const Header = () => {
               to="/testimonials"
               className={location.pathname === '/news' ? 'active' : ''}
             >
-              Testimonials
+              Case Studies
             </Link>
           </li>
           <li className='p-4 border-b border-gray-600'>

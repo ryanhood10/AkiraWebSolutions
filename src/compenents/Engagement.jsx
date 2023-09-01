@@ -73,12 +73,10 @@ const Engagement = () => {
                             <ul className="text-xl ">
                                 <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
                                     <strong className={`text-xl font-bold transition-all duration-[2s] ${colorTransition ? 'text-[#FF0033]' : 'text-black'}`}>
-                                        <span className={`${colorTransition ? 'text-2xl duration-[2s]' : ''}`}> <img className="h-12 inline-block" src={LaptopIcon} alt="Laptop Icon" ></img>Custom Website Builds</span>
+                                        <span className={`${colorTransition ? 'text-2xl duration-[2s]' : ''}`}> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Customer Service AI Chatbots</span>
                                     </strong> 
                                     <br></br>
-                                    Crafted to mirror your brand, our websites ensure a seamless and engaging user experience tailored to your business needs.
-                                    <br></br>
-                                     From streamlined landing pages to intricate online storefronts and API integrations, our solutions scale with your needs. Elevate your digital presence and adapt with growth, ensuring both style and functionality are at the forefront.
+                                    We excel in building, maintaining, and analyzing advanced chatbots. These digital assistants not only enhance user interactions but also significantly cut operational costs and elevate customer satisfaction. With the power of in-depth data analytics, our chatbots offer valuable insights, allowing you to understand and cater to your clients' needs more effectively, optimizing engagement and fostering loyalty.
                                 </li>
                                 <br></br>
                                 <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
@@ -91,10 +89,13 @@ const Engagement = () => {
                                 <br></br>
                                 <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
                                     <strong className={`text-xl font-bold transition-all duration-[4s] ${colorTransition ? 'text-[#FF0033]' : 'text-black'}`}>
-                                        <span className={`${colorTransition ? 'text-2xl duration-[4s]' : ''}`}> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Customer Service Chatbots</span>
+                                        <span className={`${colorTransition ? 'text-2xl duration-[4s]' : ''}`}> <img className="h-12 inline-block" src={LaptopIcon} alt="Laptop Icon" ></img>Custom Website Builds</span>
                                     </strong> 
                                     <br></br>
-                                    We excel in building, maintaining, and analyzing advanced chatbots. These digital assistants not only enhance user interactions but also significantly cut operational costs and elevate customer satisfaction. With the power of in-depth data analytics, our chatbots offer valuable insights, allowing you to understand and cater to your clients' needs more effectively, optimizing engagement and fostering loyalty.                                </li>
+                                    Crafted to mirror your brand, our websites ensure a seamless and engaging user experience tailored to your business needs.
+                                    <br></br>
+                                    From streamlined landing pages to intricate online storefronts and API integrations, our solutions scale with your needs. Elevate your digital presence and adapt with growth, ensuring both style and functionality are at the forefront.
+                                </li>
                             </ul>
         
                         <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Learn More</button>
@@ -103,6 +104,6 @@ const Engagement = () => {
             </div>
         )
         
-}
-
-export default Engagement;
+    }
+    
+    export default Engagement;
