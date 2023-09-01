@@ -51,7 +51,7 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="https://www.facebook.com/profile.php?id=100092615642525">
+                                <Link to="https://www.facebook.com/profile.php?id=61550844571239">
                                     <FontAwesomeIcon icon={faFacebook} size="2x" />
                                 </Link>
                             </li>

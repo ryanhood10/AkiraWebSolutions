@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import KroegerRealEstate from './assets/pictures/KroegerRealEstate.png';
 import BitcoinBayBot from './assets/pictures/BitcoinBayBot.png';
 import SeaverMarketing1 from './assets/pictures/SeaverMarketing1.png';
 
 const Modal = ({ image, title, content, onClose }) => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 rounded-xl">
-      <div className="bg-white p-8 rounded shadow-lg relative w-4/5 h-4/5 overflow-y-auto">
+      <div className="absolute top-0 left-0 w-full h-full" onClick={onClose}></div>
+      <div 
+          className="bg-white p-8 rounded shadow-lg relative w-4/5 h-4/5 overflow-y-auto z-10" // Added z-index here
+      >
           <img src={image} alt={title} className="w-full h-1/2 object-contain rounded-t mb-4 rounded-xl"/>
           <h2 className="text-2xl font-bold mb-2">{title}</h2>
           <p className='text-xl'>{content}</p>
           <button onClick={onClose} className="absolute top-2 right-2 text-xl">&times;</button>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full" onClick={onClose}></div>
   </div>
 );
+
 
 
 const CaseStudies = () => {
@@ -53,24 +57,27 @@ const CaseStudies = () => {
                 return (
                     <>
                         <h2 className="text-2xl font-bold mb-2">Kroeger Real Estates: A Modern Transformation</h2>
-                        <p>In 2023, we revitalized the Kroeger Real Estates website, bringing it to the forefront of modern design. The last update in 2014 left it lagging behind current trends. Our redesign focused on user experience, mobile responsiveness, and SEO-optimized content. The result? A site that not only looks contemporary but also drives more organic traffic and engages users effectively. This transformation ensures Kroeger Real Estates stands out in today's competitive real estate market.</p>
-                        <p><a href="https://kroeger-real-estate-ee7b62451f9f.herokuapp.com/">See Their Website!</a></p>
+                        <p className="text-2xl">In 2023, we revitalized the Kroeger Real Estates website, bringing it to the forefront of modern design. The last update in 2014 left it lagging behind current trends. Our redesign focused on user experience, mobile responsiveness, and SEO-optimized content. The result? A site that not only looks contemporary but also drives more organic traffic and engages users effectively. This transformation ensures Kroeger Real Estates stands out in today's competitive real estate market.</p>
+                        <br></br>
+                        <p><a href="https://kroeger-real-estate-ee7b62451f9f.herokuapp.com/" className='hover:underline text-blue-500'>Click Here to See Their Website! </a> </p>
                     </>
                 );
             case 'bitcoinbay':
                 return (
                     <>
-                        <h2 className="text-2xl font-bold mb-2">Bitcoinbay: AI-Powered Customer Service</h2>
-                        <p>We introduced an AI-driven chatbot for Bitcoinbay, designed to swiftly address customer queries and guide them to the right personnel. This not only enhanced user experience but also streamlined support. Leveraging data analytics, we continuously refine the bot's interactions, ensuring customer satisfaction remains at its peak. The future of customer support is here, and Bitcoinbay is leading the charge.</p>
-                        <p><a href="https:/bitcoinbay.com">See Their Website!</a></p>
+                        <h2 className="text-3xl font-bold mb-2">Bitcoinbay: AI-Powered Customer Service</h2>
+                        <p className="text-2xl">We introduced an AI-driven chatbot for Bitcoinbay, designed to swiftly address customer queries and guide them to the right personnel. This not only enhanced user experience but also streamlined support. Leveraging data analytics, we continuously refine the bot's interactions, ensuring customer satisfaction remains at its peak. The future of customer support is here, and Bitcoinbay is leading the charge.</p>
+                        <br></br>
+                        <p><a href="https:/bitcoinbay.com" className='hover:underline text-blue-500'>See Their Website!</a></p>
                     </>
                 );
             case 'seaver':
                 return (
                     <>
-                        <h2 className="text-2xl font-bold mb-2">SeaverMarketingGroup: A Digital Revamp</h2>
-                        <p>For SeaverMarketingGroup, we crafted a website that's more than just visually appealing—it's a conversion machine. Designed to guide visitors towards booking meetings, every element is optimized for engagement. Beyond aesthetics, we fortified their online presence with robust search engine optimization, ensuring they rank prominently and attract a consistent stream of potential clients.</p>
-                        <p><a href="https://seaver-marketing-group.web.app/">See Their Website!</a></p>
+                        <h2 className="text-3xl font-bold mb-2">SeaverMarketingGroup: A Digital Revamp</h2>
+                        <p className="text-2xl">For SeaverMarketingGroup, we crafted a website that's more than just visually appealing—it's a conversion machine. Designed to guide visitors towards booking meetings, every element is optimized for engagement. Beyond aesthetics, we fortified their online presence with robust search engine optimization, ensuring they rank prominently and attract a consistent stream of potential clients.</p>
+                        <br></br>
+                        <p><a href="https://seaver-marketing-group.web.app/" className='hover:underline text-blue-500'>See Their Website!</a></p>
                     </>
                 );
             default:
@@ -88,7 +95,7 @@ const CaseStudies = () => {
                     onClick={() => setSelectedModal('kroeger')}
                 >
                     <img src={KroegerRealEstate} alt="Kroeger Real Estate Website Redesign" className="w-full h-auto rounded mb-4"/>
-                    <h2 className="text-2xl font-bold mb-2">Kroeger Real Estates: A Modern Transformation</h2>
+                    <h2 className="text-2xl font-bold mb-2">Kroeger Real Estate: A Modern Transformation</h2>
                     <p>In 2023, we revitalized the Kroeger Real Estates website, bringing it to the forefront of modern design...</p>
                 </div>
 
