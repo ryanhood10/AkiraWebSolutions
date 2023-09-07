@@ -1,6 +1,6 @@
 import React from "react";
 import Typed from 'react-typed';
-import Banner1 from './assets/pictures/banner1.png'
+// import Banner1 from './assets/pictures/banner1.png'
 
 const Hero = () => {
 

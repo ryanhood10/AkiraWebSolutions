@@ -71,7 +71,7 @@ const CaseStudies = () => {
                         <h2 className="text-3xl font-bold mb-2">Bitcoinbay: AI-Powered Customer Service</h2>
                         <p className="text-2xl">We introduced an AI-driven chatbot for Bitcoinbay, designed to swiftly address customer queries and guide them to the right personnel. This not only enhanced user experience but also streamlined support. Leveraging data analytics, we continuously refine the bot's interactions, ensuring customer satisfaction remains at its peak. The future of customer support is here, and Bitcoinbay is leading the charge.</p>
                         <br></br>
-                        <p><a href="https:/bitcoinbay.com" className='hover:underline text-blue-500'>See Their Website!</a></p>
+                        <p><a href="https://bitcoinbay.com" className='hover:underline text-blue-500'>See Their Website!</a></p>
                     </>
                 );
             case 'seaver':
