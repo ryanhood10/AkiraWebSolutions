@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Market1 from './assets/pictures/MarketingImage1.png';
-import CustomerTestimonials from './assets/pictures/CustomerTestimonials.png';
+// import CustomerTestimonials from './assets/pictures/CustomerTestimonials.png';
 import react1 from './assets/pictures/ryanh5800_React_icon_programming_68468fde-6f40-4320-8555-184738340d8c.png';
 import { useNavigate } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ const HeadlineCards = () => {
         navigate('/solutions');
     };
 
-    const [card1Ref, card1Visible] = useVisible();
+    // const [card1Ref, card1Visible] = useVisible();
     const [card2Ref, card2Visible] = useVisible();
     const [card3Ref, card3Visible] = useVisible();
 
@@ -66,7 +66,7 @@ const HeadlineCards = () => {
             <div ref={card2Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card2Visible)}`}>
                 <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
                     <p className='font-bold text-2xl px-2 pt-4'>Web Solutions</p>
-                    <p className='px-2'>Responsive Customer Service Chatbots</p>
+                    <p className='px-2'>Responsive AI Chatbots</p>
                     <p className='px-2'>Application Development</p>
                     <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
                 </div>

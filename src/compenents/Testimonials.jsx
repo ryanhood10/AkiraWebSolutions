@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import KroegerRealEstate from './assets/pictures/KroegerRealEstate.png';
 import BitcoinBayBot from './assets/pictures/BitcoinBayBot.png';
 import SeaverMarketing1 from './assets/pictures/SeaverMarketing1.png';
@@ -7,9 +7,9 @@ import KroegerRealEstate2 from './assets/pictures/KroegerRealEstate2.png';
 
 const Modal = ({ image, title, content, onClose }) => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 rounded-xl">
-      <div className="absolute top-0 left-0 w-full h-full" onClick={onClose}></div>
+      <div className="absolute top-0 left-0 w-full h-full rounded-xl" onClick={onClose}></div>
       <div 
-          className="bg-gray-200 p-8 rounded shadow-lg relative w-4/5 h-4/5 overflow-y-auto z-10" // Added z-index here
+          className="bg-gray-200 p-8 rounded-xl shadow-lg relative w-4/5 h-4/5 overflow-y-auto z-10" // Added z-index here
       >
           <h2 className="text-2xl font-bold mb-2">{title}</h2>
           <p className='text-xl'>{content}</p>
@@ -36,18 +36,18 @@ const CaseStudies = () => {
       }
   };
   
-  const getTitleForModal = (study) => {
-      switch (study) {
-          case 'kroeger':
-              return "Kroeger Real Estates: A Modern Transformation";
-          case 'bitcoinbay':
-              return "Bitcoinbay: AI-Powered Customer Service";
-          case 'seaver':
-              return "SeaverMarketingGroup: A Digital Revamp";
-          default:
-              return null;
-      }
-  };
+//   const getTitleForModal = (study) => {
+//       switch (study) {
+//           case 'kroeger':
+//               return "Kroeger Real Estates: A Modern Transformation";
+//           case 'bitcoinbay':
+//               return "Bitcoinbay: AI-Powered Customer Service";
+//           case 'seaver':
+//               return "SeaverMarketingGroup: A Digital Revamp";
+//           default:
+//               return null;
+//       }
+//   };
   
 
 

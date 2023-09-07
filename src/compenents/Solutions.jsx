@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import Laptop from "./assets/pictures/MarkingImage2.png";
+import Laptop from "./assets/pictures/webPhoto1.png";
 import { useNavigate } from 'react-router-dom';
-import EmailMarketing from './assets/pictures/EmailMarketing2.png';
-import CustomWebsite from './assets/pictures/CustomWebsite.png';
-import SearchEngine from './assets/pictures/SearchEngine2.png';
+import EmailMarketing from './assets/pictures/webPhoto2.png';
+import CustomWebsite from './assets/pictures/CustomWebsite2.png';
+import SearchEngine from './assets/pictures/SearchEngine3.png';
 
 function useVisible(initialVisibility = false) {
     const [isVisible, setIsVisible] = useState(initialVisibility);
@@ -43,8 +43,12 @@ const Solutions = () => {
     const [websiteDivRef, websiteDivVisible] = useVisible();
     const [websiteImgRef, websiteImgVisible] = useVisible();
 
-    const handleViewSolutions = () => {
-        navigate('/solutions');
+    // const handleViewSolutions = () => {
+    //     navigate('/solutions');
+    // };
+
+    const handleViewContact = () => {
+        navigate('/Contact');
     };
 
     const animationClasses = (isVisible) => 
@@ -68,13 +72,16 @@ const Solutions = () => {
 
             <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 space-x-5 space-y-5">
                 <div ref={emailDivRef} className={`flex flex-col justify-center ${animationClasses(emailDivVisible)}`}>
-                    <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Email Marketing Campaigns</h1>
+                    <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Customized AI Chatbots</h1>
                     <p className="md:text-2xl sm:text-xl text-l py-2"> 
-                        Increase your revenues with our automated email marketing campaigns.
-                        By streamlining your email outreach, we attract more customers to your brand. 
-                        Let us handle the automation while you enjoy increased business growth.
+                    Our AI chatbots, expertly trained for customer service and marketing, respond swiftly and accurately to client questions.
+                     Opt for training based on your data, collaborate with us for tailored solutions, or both. 
+                     With our in-depth data analytics, monitor client conversations to enhance satisfaction. 
+                     The result? Significant time and money savings. 
+                     Plus, for Salesforce users, seamless integration awaits. 
+                    Choose Akira Web Solutions for AI-driven excellence.
                     </p>
-                    <button onClick={handleViewSolutions} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-purple-400">Contact Us</button>
+                    <button onClick={handleViewContact} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:bg-purple-400">Contact Us</button>
                 </div>
                 <img ref={emailImgRef} className={`w-[500px] mx-auto my-4 rounded-xl ${animationClasses(emailImgVisible)}`} src={EmailMarketing} alt="/" />
             </div>
@@ -89,7 +96,7 @@ const Solutions = () => {
                         Experience increased exposure and attract a wider audience, all while we manage the complexities of SEO. 
                         Elevate your online presence with our proven strategies and watch your visibility soar on the internet.
                     </p>
-                    <button onClick={handleViewSolutions} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-purple-400">Contact Us</button>
+                    <button onClick={handleViewContact} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:bg-purple-400">Contact Us</button>
                 </div>
                 <img ref={seoImgRef} className={`w-[500px] mx-auto my-4 rounded-xl ${animationClasses(seoImgVisible)}`} src={SearchEngine} alt="/" />
             </div>
@@ -105,7 +112,7 @@ const Solutions = () => {
                         In today's digital landscape, a compelling landing page is indispensable for every company.
                         Let us create an online presence that truly reflects your business while incorporating essential website features.
                     </p>
-                    <button onClick={handleViewSolutions} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-purple-400">Contact Us</button>
+                    <button onClick={handleViewContact} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:bg-purple-400">Contact Us</button>
                 </div>
             </div>
         </div>

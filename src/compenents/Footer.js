@@ -69,7 +69,7 @@ function Footer() {
                             Solutions
                         </Link>
                         <ul>
-                            <li className='py-2 text-sm'>Customer Service Chatbot</li>
+                            <li className='py-2 text-sm'>Customer Service AI Chatbots</li>
                             <li className='py-2 text-sm'>Analytics</li>
                             <li className='py-2 text-sm'>Search Engine Optimization</li>
                             <li className='py-2 text-sm'>Website Customization</li>
