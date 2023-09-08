@@ -61,11 +61,15 @@ const Solutions = () => {
                 <div ref={contentRef} className={`flex flex-col justify-center space-y-3 ${animationClasses(contentVisible)}`}>
                     <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Our Solutions</h1>
                     <p className="md:text-2xl sm:text-xl text-l py-2"> 
-                        Welcome to a world of comprehensive solutions designed to lead you to a successful business journey.
-                        Together, we will craft meaningful connections with targeted email campaigns that resonate. 
-                        Elevate your online presence and visibility with powerful Search Engine Optimization techniques.
-                        As well as, our specialization in web solutions focuses on building websites that capture your brand essence.
-                        Choose us to embark on a growth-oriented journey that starts with precise email campaigns, impactful SEO, and expertly crafted websites.
+                    Elevate your business to new heights with our innovative solutions.
+                     Implement the power of <span className="font-bold">AI chatbots</span> and <span className="font-bold">data analytics</span> to automate and refine your customer service, 
+                     gain deeper understanding of your clients and boost customer satisfaction. 
+                    <br></br>
+                     Our custom website builds not only enhance your online presence but also fortify your brand's image. 
+                     With search engine optimized text and layout, we ensure you shine brighter on Google.
+                      Witness the transformation our products can bring.
+                      <br></br>
+                     <span className="font-bold">Book a call today and let's chart a path to your business's brighter future.</span>
                     </p>
                 </div>
             </div>
@@ -76,7 +80,7 @@ const Solutions = () => {
                     <p className="md:text-2xl sm:text-xl text-l py-2"> 
                     Our AI chatbots, expertly trained for customer service and marketing, respond swiftly and accurately to client questions.
                      Opt for training based on your data, collaborate with us for tailored solutions, or both. 
-                     With our in-depth data analytics, monitor client conversations to enhance satisfaction. 
+                     With our in-depth data analytics, monitor client conversations to enhance satisfaction by better understanding your customers. 
                      The result? Significant time and money savings. 
                      Plus, for Salesforce users, seamless integration awaits. 
                     Choose Akira Web Solutions for AI-driven excellence.

@@ -57,7 +57,7 @@ const HeadlineCards = () => {
                     <p className='font-bold text-2xl px-2 pt-4'>Premium Websites</p>
                     <p className='px-2'>Customized Solutions</p>
                     <p className='px-2'>Increased Visibility with SEO</p>
-                    <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">Our Work</button>
+                    <button onClick={handleViewTestimonials} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">Our Work</button>
                 </div>
                 <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={react1} alt='Premium Websites' />
             </div>

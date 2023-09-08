@@ -42,7 +42,7 @@ function Footer() {
             <div className='lg:col-span-3 flex justify-between space-x-10'>
                 <div>
                     <h1 className='w-full text-3xl font-bold text-[#FF0033]'> Connect with us Further</h1>
-                    <p className='py-4'>Connect with us on LinkedIn, Facebook, or send us an email</p>
+                    <p className='py-4'>Connect with us on LinkedIn, Facebook, or send us an email at <span className='font-bold'>connect@akirawebsolutions.com</span></p>
                     <nav>
                         <ul className="flex justify-between md:w-[75%] my-6">
                             <li>

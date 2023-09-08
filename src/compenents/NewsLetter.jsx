@@ -84,7 +84,7 @@ const NewsLetter = () => {
                 <div className="">
                     <h1 className="text-xl md:text-2xl lg:text-4xl font-bold py-1 md:py-2">🤖 Want to enhance efficiency and elevate customer satisfaction with a chatbot?
                     <br></br>
-                    🤖 Need website or application developed that boosts your online presence? </h1>
+                    🖥️ Need website or application developed that boosts your online presence? </h1>
                     <p>See how we can improve your business and save you time!</p>
                 </div>
                 <div className="my-2 md:my-4">

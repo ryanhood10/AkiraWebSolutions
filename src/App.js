@@ -42,7 +42,7 @@ function App() {
         <Calendly />
         <NewsLetter />
         <Footer />
-        <OurPartners />
+        {/* <OurPartners /> */}
             </React.Fragment>
             }
           />

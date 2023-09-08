@@ -121,6 +121,19 @@ const CaseStudies = () => {
                     <p>For SeaverMarketingGroup, we crafted a website...</p>
                 </div>
             </div>
+            <div>
+                <p className='py-8 px-8 text-lg '>Unlock unparalleled digital potential for your brand. 
+                    From AI chatbots enhancing customer engagement to custom website designs and strategic search engine optimization,
+                     our expertise is your advantage. 
+                     Dive into our case studies and see the difference. 
+                    <br></br>
+                    <span className='text-xl text-center font-bold'>Schedule a meeting today to explore how we can bring exceptional value to your business</span>
+
+                </p>
+
+            </div>
+
+
         </div>
     );
 }
