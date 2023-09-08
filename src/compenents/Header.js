@@ -33,7 +33,7 @@ const Header = () => {
           </li>
           <li className='p-4'>
             <Link
-              to="/testimonials"
+              to="/CaseStudies"
               className={location.pathname === '/news' ? 'active' : ''}
             >
               Case Studies
@@ -76,7 +76,7 @@ const Header = () => {
           </li>
           <li className='p-4 border-b border-gray-600'>
           <Link
-              to="/testimonials"
+              to="/CaseStudies"
               className={location.pathname === '/news' ? 'active' : ''}
             >
               Case Studies

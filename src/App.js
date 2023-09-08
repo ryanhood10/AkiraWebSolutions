@@ -47,7 +47,7 @@ function App() {
             }
           />
           <Route
-            path="/testimonials"
+            path="/CaseStudies"
             element={ <React.Fragment>
                 <OtherHero />
                 <TestimonialsPage />
