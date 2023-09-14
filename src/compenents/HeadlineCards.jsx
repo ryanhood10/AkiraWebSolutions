@@ -35,7 +35,7 @@ const HeadlineCards = () => {
     const navigate = useNavigate();
 
     const handleViewTestimonials = () => {
-        navigate('/testimonials');
+        navigate('/CaseStudies');
     };
 
     const handleViewSolutions = () => {
