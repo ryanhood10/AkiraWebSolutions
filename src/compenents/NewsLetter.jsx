@@ -3,6 +3,7 @@ import axios from 'axios';
 import { validateEmail } from '../utils/validators';
 import { Link } from "react-router-dom";
 
+
 function useVisible(initialVisibility = false) {
     const [isVisible, setIsVisible] = useState(initialVisibility);
     const ref = useRef(null);
@@ -64,7 +65,7 @@ const NewsLetter = () => {
                     email: formData.email,
                     message: formData.message,
                 };
-                const response = await axios.post('https://akirawebsolutions.com/contact', emailData);
+                const response = await axios.post('https://akirawebsolutions.com/sendemail', emailData);
                 alert(response.data.message);
             } catch (error) {
                 console.error(error);

@@ -13,6 +13,7 @@ import Calendly from './compenents/Calandly';
 import BookAMeeting from './compenents/BookAMeeting';
 import OurPartners from './compenents/OurPartners';
 import Video from './compenents/Video';
+import PrivacyPolicy from './compenents/PrivacyPolicy';
 
 import './index.css';
 
@@ -70,7 +71,7 @@ function App() {
             </React.Fragment>}
           />
           <Route
-            path="/contact"
+            path="/Contact"
             element={<React.Fragment>
               <OtherHero />
               <BookAMeeting />
@@ -78,6 +79,15 @@ function App() {
               <NewsLetter />
               <Footer />
             </React.Fragment>}
+          />
+
+          <Route
+            path="/PrivacyPolicy"
+            element={ <React.Fragment>
+                <PrivacyPolicy/>
+                <Footer />
+                </React.Fragment>
+            }
           />
           
         </Routes>
