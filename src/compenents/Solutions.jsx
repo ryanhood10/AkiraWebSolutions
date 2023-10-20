@@ -48,7 +48,7 @@ const Solutions = () => {
     // };
 
     const handleViewContact = () => {
-        navigate('/Contact');
+        navigate('/connect');
     };
 
     const animationClasses = (isVisible) => 

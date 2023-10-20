@@ -71,7 +71,7 @@ function App() {
             </React.Fragment>}
           />
           <Route
-            path="/Contact"
+            path="/Connect"
             element={<React.Fragment>
               <OtherHero />
               <BookAMeeting />

@@ -41,7 +41,7 @@ const Header = () => {
           </li>
           <li className='p-4'>
             <Link
-              to="/contact"
+              to="/connect"
               className={location.pathname === '/contact' ? 'active' : ''}
             >
               Contact
