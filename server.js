@@ -11,7 +11,13 @@ const PORT = process.env.PORT || 3001;
 dotenv.config();
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000', // Adjust the origin to match your development URL
+  methods: 'POST',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Serve static files from the React app
@@ -37,13 +43,27 @@ app.post('/contact', async (req, res) => {
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     };
 
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions, (err => {
+      if(err){
+        console.log("there was an error:", err)
+      }
+      else{
+        console("Email has Sent!")
+      }
+    }));
 
     res.status(200).json({ message: 'Email sent successfully!' });
-  } catch (error) {
+  }  catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Failed to send email.' });
+  
+    // Check if the error is related to authentication (e.g., incorrect credentials)
+    if (error.message.includes('authentication failed')) {
+      res.status(401).json({ message: 'Authentication failed. Check your email credentials.' });
+    } else {
+      res.status(500).json({ message: 'Failed to send email.' });
+    }
   }
+  
 });
 //
 // The "catchall" handler: for any request that doesn't

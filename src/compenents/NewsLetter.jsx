@@ -65,8 +65,20 @@ const NewsLetter = () => {
                     email: formData.email,
                     message: formData.message,
                 };
-                const response = await axios.post('https://akirawebsolutions.com/sendemail', emailData);
-                alert(response.data.message);
+                try {
+                    const response = await axios.post('https://akirawebsolutions.com/contact', emailData);
+                    alert(response.data.message);
+                } catch (error) {
+                    if (error.response) {
+                        console.error('Response Error:', error.response.data);
+                    } else if (error.request) {
+                        console.error('Request Error:', error.request);
+                    } else {
+                        console.error('Error:', error.message);
+                    }
+                    alert('Failed to send email.');
+                }
+                
             } catch (error) {
                 console.error(error);
                 alert('Failed to send email.');
