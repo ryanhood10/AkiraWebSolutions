@@ -14,6 +14,7 @@ import BookAMeeting from './compenents/BookAMeeting';
 import OurPartners from './compenents/OurPartners';
 import Video from './compenents/Video';
 import PrivacyPolicy from './compenents/PrivacyPolicy';
+import Pricing from './compenents/Pricing';
 
 import './index.css';
 
@@ -86,6 +87,15 @@ function App() {
             path="/PrivacyPolicy"
             element={ <React.Fragment>
                 <PrivacyPolicy/>
+                <Footer />
+                </React.Fragment>
+            }
+          />
+
+<Route
+            path="/Pricing"
+            element={ <React.Fragment>
+                <Pricing/>
                 <Footer />
                 </React.Fragment>
             }

@@ -56,7 +56,7 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Contact">
+                                <Link to="/connect">
                                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                                 </Link>
                             </li>
