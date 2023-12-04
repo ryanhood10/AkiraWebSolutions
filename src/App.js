@@ -41,8 +41,8 @@ function App() {
               <Hero />
         <Engagement />
         <HeadlineCards />
-        <BookAMeeting />
-        <Calendly />
+        {/* <BookAMeeting />
+        <Calendly /> */}
         <NewsLetter />
         <Footer />
         {/* <OurPartners /> */}
@@ -62,10 +62,11 @@ function App() {
             path="/solutions"
             element={<React.Fragment>
               <OtherHero />
-              < Video />
               <Solutions />
+              < Video />
+
               <BookAMeeting />
-              <Calendly />
+              {/* <Calendly /> */}
               <NewsLetter />
               <Footer />
             </React.Fragment>}
@@ -74,8 +75,8 @@ function App() {
             path="/Connect"
             element={<React.Fragment>
               <OtherHero />
-              <BookAMeeting />
-              <Calendly />
+              {/* <BookAMeeting /> */}
+              {/* <Calendly /> */}
               <NewsLetter />
               <Footer />
             </React.Fragment>}
