@@ -66,7 +66,7 @@ const NewsLetter = () => {
                     message: formData.message,
                 };
                 try {
-                    const response = await axios.post('https://akirawebsolutions.com/contact', emailData);
+                    const response = await axios.post('https://ryans-portfolio.herokuapp.com/contact', emailData);
                     alert(response.data.message);
                 } catch (error) {
                     if (error.response) {

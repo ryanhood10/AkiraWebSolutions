@@ -1,14 +1,15 @@
 import React from "react";
 import Typed from 'react-typed';
-// import Banner1 from './assets/pictures/banner1.png'
+import { useNavigate } from 'react-router-dom';
+
 
 const Hero = () => {
 
-  
+    const navigate = useNavigate();
 
-    const handleCalendlyClick = (e) => {
-        e.preventDefault();
-        window.Calendly.initPopupWidget({url: 'https://calendly.com/ryanhood/30min'});
+
+    const handleViewContact = () => {
+        navigate('/connect');
     };
 
     return (
@@ -38,7 +39,7 @@ const Hero = () => {
                 </p>
 
 
-                <button onClick={handleCalendlyClick} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Book a Meeting Today!</button>
+                <button onClick={handleViewContact} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Book a Meeting Today!</button>
                 <br></br>
             </div>
         </div>
