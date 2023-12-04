@@ -19,22 +19,27 @@ const Header = () => {
         <h1 className='text-3xl font-bold text-[#FF0033] m-4'> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Akira Web Solutions</h1>
         <ul className='hidden md:flex font-mono text-black'>
           <li className='p-4' >
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+            <Link to="/" >
               Home
             </Link>
           </li>
           <li className='p-4'>
             <Link
               to="/solutions"
-              className={location.pathname === '/schedule' ? 'active' : ''}
             >
               Solutions
             </Link>
           </li>
           <li className='p-4'>
             <Link
+              to="/Pricing"
+            >
+              Pricing
+            </Link>
+          </li>
+          <li className='p-4'>
+            <Link
               to="/CaseStudies"
-              className={location.pathname === '/news' ? 'active' : ''}
             >
               Case Studies
             </Link>
@@ -42,7 +47,6 @@ const Header = () => {
           <li className='p-4'>
             <Link
               to="/connect"
-              className={location.pathname === '/contact' ? 'active' : ''}
             >
               Contact
             </Link>
@@ -62,22 +66,27 @@ const Header = () => {
 
           <ul className='pt-12 uppercase text-black'>
         <li className='p-4 border-b  border-gray-600' >
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+            <Link to="/" >
               Home
             </Link>
           </li>
           <li className='p-4 border-b border-gray-600'>
           <Link
               to="/solutions"
-              className={location.pathname === '/schedule' ? 'active' : ''}
             >
               Solutions
             </Link>
           </li>
           <li className='p-4 border-b border-gray-600'>
           <Link
+              to="/Pricing"
+            >
+              Pricing
+            </Link>
+          </li> 
+          <li className='p-4 border-b border-gray-600'>
+          <Link
               to="/CaseStudies"
-              className={location.pathname === '/news' ? 'active' : ''}
             >
               Case Studies
             </Link>
@@ -85,7 +94,6 @@ const Header = () => {
           <li className='p-4 border-b border-gray-600'>
             <Link
               to="/contact"
-              className={location.pathname === '/contact' ? 'active' : ''}
             >
               Contact
             </Link>
