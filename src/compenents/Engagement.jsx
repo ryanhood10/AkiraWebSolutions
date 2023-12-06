@@ -61,8 +61,6 @@ const Engagement = () => {
                     className={`w-[500px]  mx-auto my-4 rounded-xl ${animationClasses(imgIsVisible)}`} 
                     src={Engagement1} 
                     alt="AI-web-solutions" 
-                    loading="lazy"
-
                 />
                 <div 
                     ref={contentRef}

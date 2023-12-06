@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       <nav className='flex justify-between items-center h-24 max-w-[1240px] mx-auto text-white'>
-        <h1 className='text-3xl font-bold text-[#FF0033] m-4'> <img className="h-12 inline-block" src={AkiraLogo} alt="Akira Logo" ></img>Akira Web Solutions</h1>
+        <h1 className='text-3xl font-bold text-[#FF0033] m-4'> <img className="h-12 inline-block" src={AkiraLogo} alt="nashville-tech-solutions" ></img>Akira Web Solutions</h1>
         <ul className='hidden md:flex font-mono text-black'>
           <li className='p-4' >
             <Link to="/" >
