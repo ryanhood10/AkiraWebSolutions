@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 // import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import AkiraLogo from './assets/pictures/Icons/AkiraLogo2.webp';
+import AkiraLogo from './assets/pictures/Icons/AkiraLogoTransparent.webp';
 import { XIcon, MenuIcon } from '@heroicons/react/outline';
 
 
