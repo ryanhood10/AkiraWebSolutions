@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Market1 from './assets/pictures/MarketingImage1.png';
+import Market1 from './assets/pictures/MarketingImage1.webp';
 // import CustomerTestimonials from './assets/pictures/CustomerTestimonials.png';
-import react1 from './assets/pictures/ryanh5800_React_icon_programming_68468fde-6f40-4320-8555-184738340d8c.png';
+import react1 from './assets/pictures/ryanh5800_React_icon_programming_68468fde-6f40-4320-8555-184738340d8c.webp';
 import { useNavigate } from 'react-router-dom';
 
 function useVisible(initialVisibility = false) {
@@ -21,15 +21,19 @@ function useVisible(initialVisibility = false) {
             observer.observe(ref.current);
         }
 
+        // Create a variable to capture the ref.current value
+        const currentRef = ref.current;
+
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
 
     return [ref, isVisible];
 }
+
 
 const HeadlineCards = () => {
     const navigate = useNavigate();

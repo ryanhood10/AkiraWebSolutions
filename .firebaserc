@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "seaver-marketing-group",
-    "akira-web-solutions": "akira-web-solutions"
+    "default": "akira-web-solutions"
   },
   "targets": {},
   "etags": {}

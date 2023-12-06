@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import KroegerRealEstate from './assets/pictures/KroegerRealEstate.png';
 import BitcoinBayBot from './assets/pictures/BitcoinBayBot.png';
 import SeaverMarketing1 from './assets/pictures/SeaverMarketing1.png';
@@ -25,7 +23,6 @@ const Modal = ({ image, title, content, onClose }) => (
 
 
 const CaseStudies = () => {
-    const navigate = useNavigate();
 
     const [selectedModal, setSelectedModal] = useState(null);
 
@@ -46,9 +43,7 @@ const CaseStudies = () => {
       }
   };
 
-  const handleViewContact = () => {
-    navigate('/Contact');
-};
+
 
     const renderModalContent = (study) => {
         switch (study) {

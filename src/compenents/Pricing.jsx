@@ -31,7 +31,7 @@ const Pricing = () => {
             <tr>
               <td className="py-2 px-4 border border-gray-300">High</td>
               <td className="py-2 px-4 border border-gray-300">All features of medium tier plus additional API calls, payment gateways, or e-commerce integration</td>
-              <td className="py-2 px-4 border border-gray-300">$1500 - $2000</td>
+              <td className="py-2 px-4 border border-gray-300">$1500 - $2500</td>
             </tr>
           </tbody>
         </table>

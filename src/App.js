@@ -1,34 +1,50 @@
-import React, { useState, useEffect } from 'react';
+//import the watson assistant:
+import WatsonAssistantLoader from './compenents/watsonScript';
+
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Footer from './compenents/Footer';
 import Header from './compenents/Header';
+
 import Hero from './compenents/Hero';
 import Engagement from './compenents/Engagement';
-import NewsLetter from './compenents/NewsLetter';
-import HeadlineCards from './compenents/HeadlineCards';
-import TestimonialsPage from './compenents/Testimonials';
-import OtherHero from './compenents/OtherHero';
-import Solutions from './compenents/Solutions'
-import Calendly from './compenents/Calandly';
-import BookAMeeting from './compenents/BookAMeeting';
-import OurPartners from './compenents/OurPartners';
-import Video from './compenents/Video';
-import PrivacyPolicy from './compenents/PrivacyPolicy';
-import Pricing from './compenents/Pricing';
 
-import './index.css';
+
+const NewsLetter = React.lazy(() => import('./compenents/NewsLetter'));
+const HeadlineCards = React.lazy(() => import('./compenents/HeadlineCards'));
+
+
+
+
+const OtherHero = React.lazy(() => import('./compenents/OtherHero'));
+const BookAMeeting = React.lazy(() => import('./compenents/BookAMeeting'));
+const Pricing = React.lazy(() => import('./compenents/Pricing'));
+const TestimonialsPage = React.lazy(() => import('./compenents/Testimonials'));
+const Solutions = React.lazy(() => import('./compenents/Solutions'));
+const Video = React.lazy(() => import('./compenents/Video'));
+const PrivacyPolicy = React.lazy(() => import('./compenents/PrivacyPolicy'));
+
+// import TestimonialsPage from './compenents/Testimonials';
+// import Solutions from './compenents/Solutions'
+// import Calendly from './compenents/Calandly';
+// import OurPartners from './compenents/OurPartners';
+// import Video from './compenents/Video';
+// import PrivacyPolicy from './compenents/PrivacyPolicy';
+
+// import './index.css';
 
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <Router>
@@ -42,10 +58,7 @@ function App() {
               <Hero />
         <Engagement />
         <HeadlineCards />
-        {/* <BookAMeeting />
-        <Calendly /> */}
         <NewsLetter />
-        <Footer />
         {/* <OurPartners /> */}
             </React.Fragment>
             }
@@ -55,31 +68,25 @@ function App() {
             element={ <React.Fragment>
                 <OtherHero />
                 <TestimonialsPage />
-                <Footer />
                 </React.Fragment>
             }
           />
           <Route
             path="/solutions"
             element={<React.Fragment>
-              <OtherHero />
-              <Solutions />
-              < Video />
+                <OtherHero />
+                <Solutions />
+                < Video />
 
-              <BookAMeeting />
-              {/* <Calendly /> */}
-              <NewsLetter />
-              <Footer />
+                <BookAMeeting />
+                <NewsLetter />
             </React.Fragment>}
           />
           <Route
             path="/Connect"
             element={<React.Fragment>
               <OtherHero />
-              {/* <BookAMeeting /> */}
-              {/* <Calendly /> */}
               <NewsLetter />
-              <Footer />
             </React.Fragment>}
           />
 
@@ -87,7 +94,6 @@ function App() {
             path="/PrivacyPolicy"
             element={ <React.Fragment>
                 <PrivacyPolicy/>
-                <Footer />
                 </React.Fragment>
             }
           />
@@ -96,13 +102,22 @@ function App() {
             path="/Pricing"
             element={ <React.Fragment>
                 <Pricing/>
-                <Footer />
                 </React.Fragment>
             }
           />
+
           
         </Routes>
       </div>
+
+{/* WATSON ASSISTANT SCRIPT BEING PULLED IN VIA REACT */}
+
+                  {/* Other components and content */}
+                  <WatsonAssistantLoader />
+   
+           
+
+      <Footer />
     </Router>
   );
 }

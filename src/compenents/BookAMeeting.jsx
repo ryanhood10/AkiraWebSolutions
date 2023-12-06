@@ -12,17 +12,20 @@ const BookAMeeting = () => {
                 }
             });
         });
-
-        if (ref.current) {
-            observer.observe(ref.current);
+    
+        const currentRef = ref.current; // Create a local variable
+    
+        if (currentRef) {
+            observer.observe(currentRef);
         }
-
+    
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
+    
 
     const animationClasses = (isVisible) => 
         `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;

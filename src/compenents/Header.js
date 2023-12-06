@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import AkiraLogo from './assets/pictures/AkiraLogo2.png'
+import { Link } from 'react-router-dom';
+// import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import AkiraLogo from './assets/pictures/Icons/AkiraLogo2.webp';
+import { XIcon, MenuIcon } from '@heroicons/react/outline';
+
+
 
 const Header = () => {
-  const location = useLocation();
 
   //importing state for navbar toggle
   const [nav, setNav] = useState(true);
@@ -46,7 +48,7 @@ const Header = () => {
           </li>
           <li className='p-4'>
             <Link
-              to="/connect"
+              to="/Connect"
             >
               Contact
             </Link>
@@ -56,7 +58,7 @@ const Header = () => {
 
         <div onClick={handleNav} className='block md:hidden fixed top-5 right-6 text-black'>
           {/* if else statement to show navbar state */}
-          {!nav ? <AiOutlineClose size={20}/> :    <AiOutlineMenu size={20} /> }
+          {!nav ? <XIcon size={20}/> :    <MenuIcon size={20} /> }
         </div>
 
     {/* Second menu (for side Navbar) */}

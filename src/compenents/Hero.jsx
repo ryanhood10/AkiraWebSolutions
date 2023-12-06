@@ -1,5 +1,4 @@
 import React from "react";
-import Typed from 'react-typed';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -20,22 +19,7 @@ const Hero = () => {
                 <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold">Find your Web Solutions</h1>                   
                 </div>
                 <p className="md:text-2xl text-xl font-bold text-gray-500 md:pl-4 pl-2">
-                    <Typed 
-                        strings={[
-                            'Boost your online presence with our dynamic web solutions. Enhance user experience, save resources, and leverage our expertise in chatbot integration for business growth.'
-                        ]}
-                        startDelay={600}
-                        typeSpeed={10}
-                        showCursor={true}
-                    />
-                     <Typed 
-                        strings={[
-                            '🤖'
-                        ]}
-                        typeSpeed={5}
-                        startDelay={5000}
-                        showCursor={false}
-                    />
+                  Boost your online presence with our dynamic web solutions. Enhance user experience, save resources, and leverage our expertise in chatbot integration for business growth. 🤖
                 </p>
 
 

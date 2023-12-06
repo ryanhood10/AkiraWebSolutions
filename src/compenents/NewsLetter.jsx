@@ -3,7 +3,6 @@ import axios from 'axios';
 import { validateEmail } from '../utils/validators';
 import { Link } from "react-router-dom";
 
-
 function useVisible(initialVisibility = false) {
     const [isVisible, setIsVisible] = useState(initialVisibility);
     const ref = useRef(null);
@@ -17,13 +16,15 @@ function useVisible(initialVisibility = false) {
             });
         });
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
@@ -31,31 +32,34 @@ function useVisible(initialVisibility = false) {
     return [ref, isVisible];
 }
 
+const fields = ['name', 'email', 'message'];
+
 const NewsLetter = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
+
     const [errors, setErrors] = useState({});
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        const updatedErrors = { ...errors, [name]: value.trim() === '' ? 'Input is required.' : null };
-        setErrors(updatedErrors);
         setFormData({ ...formData, [name]: value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const newErrors = Object.keys(formData).reduce((acc, key) => {
-            if (formData[key].trim() === '') {
-                acc[key] = 'Input field is required.';
-            } else if (key === 'email' && !validateEmail(formData[key])) {
-                acc[key] = 'Invalid email address.';
+        const newErrors = {};
+        
+        fields.forEach((field) => {
+            if (!formData[field].trim()) {
+                newErrors[field] = 'Input field is required.';
+            } else if (field === 'email' && !validateEmail(formData[field])) {
+                newErrors[field] = 'Invalid email address.';
             }
-            return acc;
-        }, {});
+        });
+
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length === 0) {
@@ -92,19 +96,19 @@ const NewsLetter = () => {
         `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;
 
     return (
-        <div ref={newsletterRef} className={`w-full py-8 md:py-16  px-4 ${animationClasses(newsletterVisible)}`}>
+        <div ref={newsletterRef} className={`w-full py-8 md:py-16 px-4 ${animationClasses(newsletterVisible)}`}>
             <div className="max-w-[1240px] mx-auto grid"> 
                 <div className="">
                     <h1 className="text-xl md:text-2xl lg:text-4xl font-bold py-1 md:py-2">🤖 Want to enhance efficiency and elevate customer satisfaction with a chatbot?
                     <br></br>
-                    🖥️ Need website or application developed that boosts your online presence? </h1>
+                    🖥️ Need a website or application developed that boosts your online presence? </h1>
                     <p>See how we can improve your business and save you time!</p>
                 </div>
                 <div className="my-2 md:my-4">
                     <div className="flex flex-col items-center bg-gray-50">
                         <form className="w-full" onSubmit={handleSubmit}>
                             <h3>Contact</h3>
-                            {['name', 'email', 'message'].map((field) => (
+                            {fields.map((field) => (
                                 <div key={field} className="my-2">
                                     <p className="text-sm md:text-base">{field[0].toUpperCase() + field.slice(1)}:</p>
                                     {field !== 'message' ? (

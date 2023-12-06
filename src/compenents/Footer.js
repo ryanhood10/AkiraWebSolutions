@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import iconFacebook from './assets/pictures/Icons/icons_facebook.webp';
+import iconLinkedin from './assets/pictures/Icons/Icons_LinkedIn.webp';
+import iconEnvelope from './assets/pictures/Icons/Icon_Email.webp';
+
 
 function useVisible(initialVisibility = false) {
     const [isVisible, setIsVisible] = useState(initialVisibility);
@@ -17,16 +19,18 @@ function useVisible(initialVisibility = false) {
             });
         });
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current; // Store ref.current in a variable
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
-    }, []);
+    }, []); // Add ref to the dependencies array if needed
 
     return [ref, isVisible];
 }
@@ -47,17 +51,17 @@ function Footer() {
                         <ul className="flex justify-between md:w-[75%] my-6">
                             <li>
                                 <Link to="https://www.linkedin.com/company/akira-web-solutions/">
-                                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                                    <img alt='linkedin-marketing-nashville' src={iconLinkedin} size="2x" />
                                 </Link>
                             </li>
                             <li>
                                 <Link to="https://www.facebook.com/profile.php?id=61550844571239">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                    <img alt='facebook-marketing-nashville' src={iconFacebook} size="2x" />
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/connect">
-                                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                                    <img alt='email-marketing-nashville' src={iconEnvelope} size="2x" />
                                 </Link>
                             </li>
                         </ul>
