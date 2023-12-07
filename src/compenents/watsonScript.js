@@ -41,9 +41,9 @@ const WatsonAssistantLoader = () => {
     >
       <button
         onClick={handleOpenChat}
-        className="bg-gray-200 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        className="bg-gray-200 hover:bg-red-600 text-black font-bold py-2 px-4 rounded"
       >
-        Chat with Us
+        Chat with Us! 🤖
       </button>
     </div>
   );

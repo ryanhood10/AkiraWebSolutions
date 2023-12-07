@@ -107,7 +107,7 @@ const NewsLetter = () => {
                 <div className="my-2 md:my-4">
                     <div className="flex flex-col items-center bg-gray-50">
                         <form className="w-full" onSubmit={handleSubmit}>
-                            <h3>Contact</h3>
+                            <h1>Contact</h1>
                             {fields.map((field) => (
                                 <div key={field} className="my-2">
                                     <p className="text-sm md:text-base">{field[0].toUpperCase() + field.slice(1)}:</p>

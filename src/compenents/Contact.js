@@ -51,7 +51,7 @@ function Contact() {
   // Render the contact form
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <h3>Contact</h3>
+      <h1>Contact Form</h1>
       {['name', 'email', 'message'].map((field) => (
         <div key={field}>
           <p>{field[0].toUpperCase() + field.slice(1)}:</p>

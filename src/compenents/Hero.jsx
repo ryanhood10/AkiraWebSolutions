@@ -23,7 +23,7 @@ const Hero = () => {
                 </p>
 
 
-                <button onClick={handleViewContact} className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Book a Meeting Today!</button>
+                <button onClick={handleViewContact} className="bg-black hover:bg-[#FF0033] active:bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white">Book a Meeting Today!</button>
                 <br></br>
             </div>
         </div>

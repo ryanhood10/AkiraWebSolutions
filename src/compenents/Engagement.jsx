@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Engagement1 from "./assets/pictures/Engagment1.webp";
 import { useNavigate } from 'react-router-dom';
-import AkiraLogo from './assets/pictures/Icons/AkiraLogo.webp';
+import AkiraLogo from './assets/pictures/Icons/AkiraLogoTransparent.webp';
 import LaptopIcon from './assets/pictures/Icons/laptopicon.webp';
 import SearchEngine from './assets/pictures/Icons/searchicon.webp';
 
@@ -69,23 +69,23 @@ const Engagement = () => {
                     <p className="text-center text-gray-500 font-bold"> Akira Web Solutions </p>
                     <h1 className="text-center md:text-4xl sm:text-3xl text-2xl font-bold py-2"> Our Solutions</h1>
                     <ul className="text-xl ">
-                        <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
+                        <li className="border border-red-500 rounded py-2 mb-4 shadow-2xl">
                             <strong className={`text-xl font-bold`}>
                             <img className="h-12 inline-block" src={AkiraLogo} alt="ai-chatbots-nashville" ></img> <span className="text-xl font-bold"> Customer Service AI Chatbots</span>
                             </strong> 
                             <br></br>
                             We excel in building, maintaining, and analyzing advanced chatbots. These digital assistants not only enhance user interactions but also significantly cut operational costs and elevate customer satisfaction. With the power of in-depth data analytics, our chatbots offer valuable insights, allowing you to understand and cater to your clients' needs more effectively, optimizing engagement and fostering loyalty.
                         </li>
-                        <br></br>
-                        <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
+                        
+                        <li className="border border-red-500 rounded py-2 mb-4 shadow-2xl">
                             <strong className={`text-xl font-bold`}>
                                 <span className="font-bold text-xl"> <img className="h-12 inline-block" src={SearchEngine} alt="seo-services-nashville" ></img> Search Engine Optimization</span>
                             </strong> 
                             <br></br>
                             Our specialized SEO services are designed to boost your online visibility, ensuring your business consistently achieves higher rankings on search engines.
                         </li>
-                        <br></br>
-                        <li className="border border-red-500 rounded p-2 mb-4 shadow-2xl">
+                        
+                        <li className="border border-red-500 rounded py-2 mb-4 shadow-2xl">
                             <strong className={`text-xl font-bold`}>
                                 <span className="font-bold text-xl"> <img className="h-12 inline-block" src={LaptopIcon} alt="custom-website-build-nashville" ></img> Custom Website Builds</span>
                             </strong> 
