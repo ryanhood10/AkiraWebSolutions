@@ -15,7 +15,7 @@ const Solutions = React.lazy(() => import('./compenents/Solutions'));
 const Video = React.lazy(() => import('./compenents/Video'));
 const PrivacyPolicy = React.lazy(() => import('./compenents/PrivacyPolicy'));
 const LoadingIndicator = () => <div>Loading...</div>; // Replace with your loading indicator component
-
+//ssssss
 function App() {
   return (
     <Router>
