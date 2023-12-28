@@ -1,88 +1,159 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
-import iconFacebook from './assets/pictures/Icons/icons_facebook.webp';
-import iconLinkedin from './assets/pictures/Icons/Icons_LinkedIn.webp';
-import iconEnvelope from './assets/pictures/Icons/Icon_Email.webp';
-
+import iconFacebook from "./assets/pictures/Icons/icons_facebook.webp";
+import iconLinkedin from "./assets/pictures/Icons/Icons_LinkedIn.webp";
+import iconEnvelope from "./assets/pictures/Icons/Icon_Email.webp";
+import AkiraLogo from "./assets/pictures/Icons/logo.png";
 
 function useVisible(initialVisibility = false) {
-    const [isVisible, setIsVisible] = useState(initialVisibility);
-    const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(initialVisibility);
+  const ref = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            });
-        });
-
-        const currentRef = ref.current; // Store ref.current in a variable
-
-        if (currentRef) {
-            observer.observe(currentRef);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(entry.isIntersecting);
         }
+      });
+    });
 
-        return () => {
-            if (currentRef) {
-                observer.unobserve(currentRef);
-            }
-        };
-    }, []); // Add ref to the dependencies array if needed
+    const currentRef = ref.current;
 
-    return [ref, isVisible];
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return [ref, isVisible];
 }
 
 function Footer() {
-    const [footerRef, footerVisible] = useVisible();
+  const [footerRef, footerVisible] = useVisible();
 
-    const animationClasses = (isVisible) => 
-        `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;
+  const animationClasses = (isVisible) =>
+    `transition-opacity duration-700 ease-in-out ${
+      isVisible ? "opacity-100" : "opacity-0"
+    }`;
 
-    return (
-        <footer ref={footerRef} className={`max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-600 ${animationClasses(footerVisible)}`}>
-            <div className='lg:col-span-3 flex justify-between space-x-10'>
-                <div>
-                    <h1 className='w-full text-3xl font-bold text-[#FF0033]'> Connect with us Further</h1>
-                    <p className='py-4'>Connect with us on LinkedIn, Facebook, or send us an email at <span className='font-bold'>connect@akirawebsolutions.com</span></p>
-                    <nav>
-                        <ul className="flex justify-between md:w-[75%] my-6">
-                            <li>
-                                <Link to="https://www.linkedin.com/company/akira-web-solutions/">
-                                    <img alt='linkedin-marketing-nashville' src={iconLinkedin} size="2x" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="https://www.facebook.com/profile.php?id=61550844571239">
-                                    <img alt='facebook-marketing-nashville' src={iconFacebook} size="2x" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/connect">
-                                    <img alt='email-marketing-nashville' src={iconEnvelope} size="2x" />
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className='lg:col-span-3 flex justify-between'>
-                    <div>
-                        <Link to="/solutions" className="text-[#FF0033] text-xl font-bold">
-                            Solutions
-                        </Link>
-                        <ul>
-                            <li className='py-2 text-sm'>Customer Service AI Chatbots</li>
-                            <li className='py-2 text-sm'>Analytics</li>
-                            <li className='py-2 text-sm'>Search Engine Optimization</li>
-                            <li className='py-2 text-sm'>Website Customization</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer
+      ref={footerRef}
+      className={`bg-white text-gray-700 border-gray-200 mt-5 ${animationClasses(
+        footerVisible
+      )}`}
+    >
+      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-4 grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:gap-y-0">
+        <div className="flex flex-col items-start lg:items-center">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            {" "}
+            <img
+              src={AkiraLogo}
+              alt="Company Logo"
+              style={{ width: "130px", height: "130px" }}
+            />
+            <h6 className="text-xs sm:text-sm md:text-1xl lg:text-1xl text-[#FF0033]">
+              Akira Web Solutions
+            </h6>
+          </Link>
+        </div>
+
+        <div>
+          <h2 className="text-gray-900 text-lg">Connect with us Further</h2>
+          <p className="mt-2 text-base text-gray-500">
+            Connect with us on LinkedIn, <br /> Facebook, or send us an email at
+            <a
+              href="mailto:connect@akirawebsolutions.com"
+              className="text-[#FF0033] ml-1"
+            >
+              connect@akirawebsolutions.com
+            </a>
+          </p>
+          <div className="flex mt-4 space-x-6">
+            <Link
+              to="https://www.linkedin.com/company/akira-web-solutions/"
+              className="text-gray-400 hover:text-gray-500 flex lg:items-center"
+            >
+              <span className="sr-only">LinkedIn</span>
+              <img
+                alt="linkedin-marketing-nashville"
+                className="h-6 w-6"
+                src={iconLinkedin}
+                style={{ height: "30px", width: "30px" }}
+              />
+            </Link>
+            <Link
+              to="https://www.facebook.com/profile.php?id=61550844571239"
+              className="text-gray-400 hover:text-gray-500"
+            >
+              <span className="sr-only">Facebook</span>
+              <img
+                alt="facebook-marketing-nashville"
+                className="h-6 w-6"
+                src={iconFacebook}
+                style={{ height: "40px", width: "40px" }}
+              />
+            </Link>
+            <Link to="/connect" className="text-gray-400 hover:text-gray-500">
+              <span className="sr-only">Email</span>
+              <img
+                alt="email-marketing-nashville"
+                className="h-6 w-6"
+                src={iconEnvelope}
+                style={{ height: "40px", width: "40px" }}
+              />
+            </Link>
+          </div>
+        </div>
+        <div>
+          <h2 className="text-gray-900 text-lg">Solutions</h2>
+          <nav className="mt-4">
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/solutions"
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  Customer Service AI Chatbots
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions"
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions"
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  Search Engine Optimization
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions"
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  Website Customization
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

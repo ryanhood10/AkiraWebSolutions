@@ -32,7 +32,7 @@ const BookAMeeting = () => {
 
     return (
         <div ref={ref} className={animationClasses(isVisible)}>
-            <h1 className="px-4 py-16 text-center text-xl md:text-2xl lg:text-4xl font-bold md:py-2"> Schedule a Meeting with Us! 📞  </h1>
+            <h1 className="px-4 mt-4 text-center text-xl md:text-2xl lg:text-2xl  "> Schedule a Meeting with Us! 📞  </h1>
             <p className=' text-center '>via Calendly</p>
 
         </div>

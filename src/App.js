@@ -14,8 +14,9 @@ const TestimonialsPage = React.lazy(() => import('./compenents/Testimonials'));
 const Solutions = React.lazy(() => import('./compenents/Solutions'));
 const Video = React.lazy(() => import('./compenents/Video'));
 const PrivacyPolicy = React.lazy(() => import('./compenents/PrivacyPolicy'));
+const CaseStudies_UperBanner = React.lazy(()=>import('./compenents/CaseStudies_UperBanner'));
 const LoadingIndicator = () => <div>Loading...</div>; // Replace with your loading indicator component
-//ssssss
+
 function App() {
   return (
     <Router>
@@ -41,7 +42,7 @@ function App() {
             element={
               <Suspense fallback={<LoadingIndicator />}>
                 <React.Fragment>
-                  <OtherHero />
+                  <CaseStudies_UperBanner />
                   <TestimonialsPage />
                 </React.Fragment>
               </Suspense>
@@ -52,7 +53,7 @@ function App() {
             element={
               <Suspense fallback={<LoadingIndicator />}>
                 <React.Fragment>
-                  <OtherHero />
+                  {/* <OtherHero /> */}
                   <Solutions />
                   <Video />
                   <BookAMeeting />
