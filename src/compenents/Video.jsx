@@ -1,19 +1,22 @@
 import React from "react";
-import AkiraVideo from './assets/videos/AkiraEngagement.mp4';
+import AkiraVideo from "./assets/videos/AkiraEngagement.mp4";
 
-const Video = ({alt = "ai-solutions-video" }) => {
-  
-    return (
-        <div className="flex justify-center items-center h-screen bg-white rounded-xl">
-            <video 
-                src={AkiraVideo}
-                className="max-w-screen-lg rounded-md"
-                controls
-                alt={alt}
-            />
-            
-        </div>
-    );
-}
+const Video = ({ title = "AI Solutions Video" }) => {
+  return (
+    <div className="flex justify-center items-center bg-white">
+      <div className="w-full px-4  max-w-screen-lg mx-auto">
+        <h2 className="text-center  text-1xl md:text-2xl lg:text-1xl mb-2">
+          Revolutionizing Digital with Akira Web Solution
+        </h2>
+        <video
+          src={AkiraVideo}
+          className="w-full h-auto rounded-md shadow-lg"
+          controls
+          title={title} // Accessible title
+        />
+      </div>
+    </div>
+  );
+};
 
 export default Video;

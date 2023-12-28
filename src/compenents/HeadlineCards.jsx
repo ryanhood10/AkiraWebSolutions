@@ -1,93 +1,122 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Market1 from './assets/pictures/MarketingImage1.webp';
-// import CustomerTestimonials from './assets/pictures/CustomerTestimonials.png';
-import react1 from './assets/pictures/ryanh5800_React_icon_programming_68468fde-6f40-4320-8555-184738340d8c.webp';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import Market1 from "./assets/pictures/MarkingImage2.png";
+import react1 from "./assets/pictures/ryanh5800_React_icon_programming_68468fde-6f40-4320-8555-184738340d8c.webp";
+import { useNavigate } from "react-router-dom";
 
 function useVisible(initialVisibility = false) {
-    const [isVisible, setIsVisible] = useState(initialVisibility);
-    const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(initialVisibility);
+  const ref = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            });
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
         });
+      },
+      { threshold: 0.1 }
+    );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
 
-        // Create a variable to capture the ref.current value
-        const currentRef = ref.current;
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
-        return () => {
-            if (currentRef) {
-                observer.unobserve(currentRef);
-            }
-        };
-    }, []);
-
-    return [ref, isVisible];
+  return [ref, isVisible];
 }
-
 
 const HeadlineCards = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [card2Ref, card2Visible] = useVisible();
+  const [card3Ref, card3Visible] = useVisible();
 
-    const handleViewTestimonials = () => {
-        navigate('/CaseStudies');
-    };
+  const handleViewTestimonials = () => navigate("/CaseStudies");
+  const handleViewSolutions = () => navigate("/solutions");
 
-    const handleViewSolutions = () => {
-        navigate('/solutions');
-    };
+  const animationClasses = (isVisible) =>
+    `transform transition-all duration-1000 ease-in-out ${
+      isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+    }`;
 
-    // const [card1Ref, card1Visible] = useVisible();
-    const [card2Ref, card2Visible] = useVisible();
-    const [card3Ref, card3Visible] = useVisible();
-
-    const animationClasses = (isVisible) => 
-        `transform transition-all duration-1000 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`;
-
-    return (
-        <div className='mx-w-[1640px] mx-auto p-4 py-12 px-4 grid md:grid-cols-2 gap-6'>
-            {/* Card 3 */}
-            <div ref={card3Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card3Visible)}`}>
-                <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p className='font-bold text-2xl px-2 pt-4'>Premium Websites</p>
-                    <p className='px-2'>Customized Solutions</p>
-                    <p className='px-2'>Increased Visibility with SEO</p>
-                    <button onClick={handleViewTestimonials} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">Our Work</button>
-                </div>
-                <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={react1} alt='Premium Websites' />
-            </div>
-
-            {/* Card 2 */}
-            <div ref={card2Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card2Visible)}`}>
-                <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p className='font-bold text-2xl px-2 pt-4'>Web Solutions</p>
-                    <p className='px-2'>Responsive AI Chatbots</p>
-                    <p className='px-2'>Application Development</p>
-                    <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
-                </div>
-                <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={Market1} alt='Marketing Solutions' />
-            </div>
-
-            {/* Card 3
-            <div ref={card3Ref} className={`rounded-xl relative hover:scale-105 duration-300 ${animationClasses(card3Visible)}`}>
-                <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
-                    <p className='font-bold text-2xl px-2 pt-4'>Premium Websites</p>
-                    <p className='px-2'>Customized Solutions</p>
-                    <button onClick={handleViewSolutions} className="bg-[#FF0033] w-[100px] rounded-md font-medium my-6 mx-auto py-3 text-black">View Now</button>
-                </div>
-                <img className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl' src={react1} alt='Premium Websites' />
-            </div> */}
+  return (
+    <div className="flex flex-wrap justify-center items-center mx-auto p-4 py-12 gap-8 max-w-full">
+      {/* Card 2 */}
+      <div
+        ref={card2Ref}
+        className={`bg-gradient-to-b from-black to-transparent rounded-xl overflow-hidden shadow-lg ${animationClasses(
+          card2Visible
+        )}`}
+        style={{ width: "90%", maxWidth: "600px" }} // Responsive width with a maximum
+      >
+        <img
+          className="w-full h-60 object-cover"
+          src={Market1}
+          alt="Marketing Solutions"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-800 via-red-800 to-red-600 opacity-30"></div>
+        <div className="absolute inset-0 flex flex-col justify-center p-4">
+          <p className="text-xl font-bold text-white text-center mb-2">
+            Web Solutions
+          </p>
+          <p className="text-md text-white-300 text-center text-white ">
+            Responsive AI Chatbots
+          </p>
+          <p className="text-md text-white-300 mb-4 text-center text-white">
+            Application Development
+          </p>
+          <button
+            onClick={handleViewSolutions}
+            className="self-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
+          >
+            View Now
+          </button>
         </div>
-    );
-}
+      </div>
+
+      {/* Card 3 */}
+      <div
+        ref={card3Ref}
+        className={`bg-gradient-to-b from-black to-transparent rounded-xl overflow-hidden shadow-lg ${animationClasses(
+          card3Visible
+        )}`}
+        style={{ width: "90%", maxWidth: "600px" }} // Responsive width with a maximum
+      >
+        <img
+          className="w-full h-60 object-cover"
+          src={react1}
+          alt="Premium Websites"
+        />
+        {/* Reduced the opacity of the gradient for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-800 via-red-800 to-red-600 opacity-30"></div>
+        <div className="absolute inset-0 flex flex-col justify-center p-4">
+          <p className="text-xl font-bold text-white text-center mb-2">
+            Premium Websites
+          </p>
+          <p className="text-md text-white-300 text-center text-white">
+            Customized Solutions
+          </p>
+          <p className="text-md text-white-300 mb-4 text-center text-white">
+            Increased Visibility with SEO
+          </p>
+          <button
+            onClick={handleViewTestimonials}
+            className="self-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
+          >
+            Our Work
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default HeadlineCards;
