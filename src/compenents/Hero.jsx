@@ -27,23 +27,20 @@ const Hero = () => {
       {/* Text Container */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 text-center">
         <h2 className="text-2xl  sm:text-1xl md:text-2xl lg:text-3xl text-white">
-          Grow with Data
-        </h2>
-        <h1 className="text-2xl text-1xl sm:text-1xl md:text-2xl lg:text-3xl md:text-3xl text-white mt-2">
-          Find your Web Solutions
-        </h1>
+        Grow Your Business Online 
+        <br/>
+        with Akira Web Solutions 
+          </h2>
         <p className="text-md md:text-lg text-white max-w-2xl mx-auto mt-4">
           {" "}
           {/* Increased max-width here */}
-          Boost your online presence with our dynamic web solutions. Enhance
-          user experience, save resources, and leverage our expertise in chatbot
-          integration for business growth. 🤖
+          Nashville's Solution to SEO, E-commerce, Web Design, and AI 
         </p>
         <button
           onClick={handleViewContact}
           className="mt-6 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded transition duration-300"
         >
-          Book a Meeting Today!
+          Get a Free Quote Today!
         </button>
       </div>
     </div>

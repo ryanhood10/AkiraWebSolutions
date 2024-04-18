@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AkiraLogo from "./assets/pictures/Icons/AkiraLogoTransparent.webp";
 import LaptopIcon from "./assets/pictures/Icons/laptopicon.webp";
 import SearchEngine from "./assets/pictures/Icons/searchicon.webp";
+import Ecommerce from "./assets/partnerLogos/ShopifyLogoBlack.png";
 
 const Engagement = () => {
   const navigate = useNavigate();
@@ -58,6 +59,18 @@ const Engagement = () => {
   return (
     <div className="w-full  py-16 px-4">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div>
+      <p className="text-center text-gray-600 text-1xl">
+            Akira Web Solutions
+          </p>
+          <h1 className="text-center md:text-4xl text-2xl  text-gray-800">
+            Our Solutions
+          </h1>
+          <p className="text-gray-600 mt-2">
+          Our dynamic web solutions combine stunning design, powerful SEO, and user-friendly E-commerce stores built on Shopify. 
+           Plus, leverage the power of AI chatbots to engage visitors 24/7 and streamline operations.
+              </p>
+             
         <img
           ref={imgRef}
           className={`w-full h-auto mx-auto my-4 rounded-lg shadow-lg ${animationClasses(
@@ -72,15 +85,29 @@ const Engagement = () => {
             contentIsVisible
           )}`}
         >
-          <p className="text-center text-gray-600 text-1xl">
-            Akira Web Solutions
-          </p>
-          <h1 className="text-center md:text-4xl text-2xl  text-gray-800">
-            Our Solutions
-          </h1>
+           </div>
+           </div>
 
-          <div className="space-y-6">
-            <div className="bg-white border border-red-500 rounded-lg p-4 shadow-xl">
+          
+
+          <div className="space-y-4">
+          <div className="bg-white border border-red-500 rounded-lg p-4 shadow-xl">
+              <div className="flex items-center space-x-4">
+                <img
+                  className="h-12"
+                  src={SearchEngine}
+                  alt="seo-services-nashville"
+                />
+                <h2 className="text-1xl ">Dominate Your Niche's Google Searches with Expert SEO & Web Design
+</h2>
+              </div>
+              <p className="text-gray-600 mt-2">
+              Craft a stunning website that ranks high on Google. 
+              Our SEO experts in the greater Nashville area ensure your business is seen by 
+              local & national customers.  Get a free quote today!
+              </p>
+            </div>
+            <div className="bg-white border border-red-500 rounded-lg pt-2 shadow-xl">
               <div className="flex items-center space-x-4">
                 <img
                   className="h-12"
@@ -90,28 +117,24 @@ const Engagement = () => {
                 <h2 className="text-1xl ">Customer Service AI Chatbots</h2>
               </div>
               <p className="text-gray-600 mt-2">
-                We excel in building, maintaining, and analyzing advanced
-                chatbots. These digital assistants not only enhance user
-                interactions but also significantly cut operational costs and
-                elevate customer satisfaction. With the power of in-depth data
-                analytics, our chatbots offer valuable insights, allowing you to
-                understand and cater to your clients' needs more effectively,
-                optimizing engagement and fostering loyalty.
+              Engage customers 24/7 and cut costs. Our AI chatbots answer questions, improve satisfaction, and provide valuable insights. 
+
+
               </p>
             </div>
+           
             <div className="bg-white border border-red-500 rounded-lg p-4 shadow-xl">
               <div className="flex items-center space-x-4">
                 <img
                   className="h-12"
-                  src={SearchEngine}
-                  alt="seo-services-nashville"
+                  src={Ecommerce}
+                  alt="custom-ecommerce-build-nashville"
                 />
-                <h2 className="text-1xl ">Search Engine Optimization</h2>
+                <h2 className="text-1xl ">Sell more online with a powerful Shopify store built by Akira Web Solutions</h2>
               </div>
               <p className="text-gray-600 mt-2">
-                Our specialized SEO services are designed to boost your online
-                visibility, ensuring your business consistently achieves higher
-                rankings on search engines.
+              Sell more online with a powerful Shopify store built by Akira Web Solutions. 
+              Reach new customers and boost your sales!  Free Quote Today!
               </p>
             </div>
             <div className="bg-white border border-red-500 rounded-lg p-4 shadow-xl">
@@ -121,23 +144,23 @@ const Engagement = () => {
                   src={LaptopIcon}
                   alt="custom-website-build-nashville"
                 />
-                <h2 className="text-1xl ">Custom Website Builds</h2>
+                <h2 className="text-1xl ">Streamline and Automate with Custom Apps
+</h2>
               </div>
               <p className="text-gray-600 mt-2">
-                Crafted to mirror your brand, our websites ensure a seamless and
-                engaging user experience tailored to your business needs.
+              Akira Web Solutions builds custom solutions for your unique needs. Want to know how technology can improve your business? Free Consultation Today!
               </p>
             </div>
-          </div>
-
-          <button
+            <div className="flex justify-center items-center">
+            <button
             onClick={handleViewSolutions}
             style={{ marginTop: "40px" }}
             className="bg-red-500 hover:bg-red-600 text-white  py-2 px-6 rounded-lg transition duration-300 mx-auto "
           >
             Learn More
-          </button>
-        </div>
+          </button></div>
+          </div>
+
       </div>
     </div>
   );

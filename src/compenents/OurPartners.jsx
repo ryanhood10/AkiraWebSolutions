@@ -6,39 +6,41 @@ import FuzzEraserLogo from './assets/partnerLogos/FuzzEraserLogo2.png';
 import VincentPeachLogo from './assets/partnerLogos/VincentPeachLogo.png';
 import KroegerRealEstateLogo from './assets/partnerLogos/KroegerRealEstateLogo.jpeg';
 import PMTsiteLogo from './assets/partnerLogos/PMTsiteLogo.png';
-import NashTrash from './assets/partnerLogos/NashTrashLogo.png'
+import NashTrash from './assets/partnerLogos/NashTrashLogo.png';
+import IBMLogo from './assets/partnerLogos/IBMLogo.png';
+import ShopLogo from './assets/partnerLogos/ShopifyPart.png';
 
 const partnerLogos = [
     BondsSouthEastIncLogo,
     CreativeColoringLogo,
     FuzzEraserLogo,
     VincentPeachLogo,
-    KroegerRealEstateLogo,
+    KroegerRealEstateLogo, IBMLogo,
     PMTsiteLogo,
-    BitcoinBayLogo, BondsSouthEastIncLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo, ShopLogo,
     CreativeColoringLogo,
     NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
-    KroegerRealEstateLogo,
+    KroegerRealEstateLogo,IBMLogo,
     PMTsiteLogo,
-    BitcoinBayLogo, BondsSouthEastIncLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo, ShopLogo,
     CreativeColoringLogo,    NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
-    KroegerRealEstateLogo,
+    KroegerRealEstateLogo,IBMLogo,
     PMTsiteLogo,
-    BitcoinBayLogo, BondsSouthEastIncLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo, ShopLogo,
     CreativeColoringLogo, NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
-    KroegerRealEstateLogo,
+    KroegerRealEstateLogo, IBMLogo,
     PMTsiteLogo,
-    BitcoinBayLogo, BondsSouthEastIncLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo, ShopLogo,
     CreativeColoringLogo, NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
-    KroegerRealEstateLogo,
+    KroegerRealEstateLogo, IBMLogo,
     PMTsiteLogo,
     BitcoinBayLogo,
 ];
@@ -59,7 +61,7 @@ const BannerCarousel = () => {
     <div className="flex justify-center overflow-hidden bg-white h-120px">
 
       <div ref={carouselRef}
-       className="flex overflow-hidden w-[81%]"       
+       className="flex overflow-hidden w-[80%]"       
         style={{ scrollBehavior: 'smooth' }}>
         {partnerLogos.map((logo, index) => (
           <img
