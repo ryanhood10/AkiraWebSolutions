@@ -4,6 +4,7 @@ import Footer from './compenents/Footer';
 import Header from './compenents/Header';
 import Hero from './compenents/Hero';
 import Engagement from './compenents/Engagement';
+import OurPartners from './compenents/OurPartners';
 import WatsonAssistantLoader from './compenents/watsonScript';
 const NewsLetter = React.lazy(() => import('./compenents/NewsLetter'));
 const HeadlineCards = React.lazy(() => import('./compenents/HeadlineCards'));
@@ -14,7 +15,7 @@ const TestimonialsPage = React.lazy(() => import('./compenents/Testimonials'));
 const Solutions = React.lazy(() => import('./compenents/Solutions'));
 const Video = React.lazy(() => import('./compenents/Video'));
 const PrivacyPolicy = React.lazy(() => import('./compenents/PrivacyPolicy'));
-const CaseStudies_UperBanner = React.lazy(()=>import('./compenents/CaseStudies_UperBanner'));
+const CaseStudiesUpperBanner = React.lazy(()=>import('./compenents/CaseStudies_UperBanner'));
 const LoadingIndicator = () => <div>Loading...</div>; // Replace with your loading indicator component
 
 function App() {
@@ -31,8 +32,8 @@ function App() {
                   <Hero />
                   <Engagement />
                   <HeadlineCards />
+                  <OurPartners />
                   <NewsLetter />
-                  {/* <OurPartners /> */}
                 </React.Fragment>
               </Suspense>
             }
@@ -42,7 +43,7 @@ function App() {
             element={
               <Suspense fallback={<LoadingIndicator />}>
                 <React.Fragment>
-                  <CaseStudies_UperBanner />
+                  <CaseStudiesUpperBanner />
                   <TestimonialsPage />
                 </React.Fragment>
               </Suspense>

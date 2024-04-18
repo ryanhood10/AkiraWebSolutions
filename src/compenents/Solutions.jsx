@@ -66,8 +66,8 @@ const Solutions = () => {
               The <span className="text-red-500">Best</span>
             </h3>
             <h3 className="text-center text-3xl text-white my-2 sm:my-3">
-              Solutions
-              <span className="text-red-500"> We Provide</span>
+              Data, AI, and SEO
+              <span className="text-red-500"> Solutions</span>
             </h3>
           </div>
           <img

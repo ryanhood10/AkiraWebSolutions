@@ -1,32 +1,77 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import BitcoinBayLogo from './assets/partnerLogos/bitcoinbayLogo.webp';
+import BondsSouthEastIncLogo from './assets/partnerLogos/BondsSouthEastInc_SmallLogo.png';
+import CreativeColoringLogo from './assets/partnerLogos/creativeColoringLogo.png';
+import FuzzEraserLogo from './assets/partnerLogos/FuzzEraserLogo2.png';
+import VincentPeachLogo from './assets/partnerLogos/VincentPeachLogo.png';
+import KroegerRealEstateLogo from './assets/partnerLogos/KroegerRealEstateLogo.jpeg';
+import PMTsiteLogo from './assets/partnerLogos/PMTsiteLogo.png';
 
-const OurPartners = () => {
-    return (
-        <div className="p-6">
-            <h2 className="text-center text-xl  mb-4">
-                Need Online Marketing Solutions? Check out our partners!
-            </h2>
-            <div className="flex justify-center gap-4">
-                <div className="w-1/3 p-4 border rounded shadow hover:shadow-2xl hover:ring-2 hover:ring-red-500 transition-shadow duration-300">
-                    <h3 className="text-xl  mb-2">
-                    <a href="https://seaver-marketing-group.web.app/" target="_blank" rel="noopener noreferrer" className=" hover:underline">
-                        Seaver Marketing Group
-                    </a>
-                        </h3>
-                    <p className="text-gray-600">
-                        Email marketing specialists based out of Colorado.
-                    </p>
-                    
-                </div>
-                <div className="w-1/3 p-4 border rounded shadow hover:shadow-2xl hover:ring-2 hover:ring-red-500 transition-shadow duration-300">
-                    <h3 className="text-xl  mb-2">Nathaly Aviles</h3>
-                    <p className="text-gray-600">
-                        Social media management marketing based out of Nashville, TN.
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
-}
+const partnerLogos = [
+    BondsSouthEastIncLogo,
+    CreativeColoringLogo,
+    FuzzEraserLogo,
+    VincentPeachLogo,
+    KroegerRealEstateLogo,
+    PMTsiteLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo,
+    CreativeColoringLogo,
+    FuzzEraserLogo,
+    VincentPeachLogo,
+    KroegerRealEstateLogo,
+    PMTsiteLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo,
+    CreativeColoringLogo,
+    FuzzEraserLogo,
+    VincentPeachLogo,
+    KroegerRealEstateLogo,
+    PMTsiteLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo,
+    CreativeColoringLogo,
+    FuzzEraserLogo,
+    VincentPeachLogo,
+    KroegerRealEstateLogo,
+    PMTsiteLogo,
+    BitcoinBayLogo, BondsSouthEastIncLogo,
+    CreativeColoringLogo,
+    FuzzEraserLogo,
+    VincentPeachLogo,
+    KroegerRealEstateLogo,
+    PMTsiteLogo,
+    BitcoinBayLogo,
+];
+const BannerCarousel = () => {
+  const carouselRef = useRef(null);
 
-export default OurPartners;
+  useEffect(() => {
+    const carouselInterval = setInterval(() => {
+      carouselRef.current.scrollLeft += 120; // Adjust scroll speed as needed
+    }, 2000); // Adjust interval as needed
+
+    return () => clearInterval(carouselInterval);
+  }, []);
+
+  return (
+    <div className="py-2 w-full text-center">
+        <h3 className='pb-4 text-xl'>Our Partners</h3>
+    <div className="flex justify-center overflow-hidden bg-white h-120px">
+
+      <div ref={carouselRef}
+       className="flex overflow-hidden w-[81%]"       
+        style={{ scrollBehavior: 'smooth' }}>
+        {partnerLogos.map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt={`Partner Logo ${index}`}
+            className="h-full max-h-16 mx-4"
+          />
+        ))}
+      </div>
+    </div>
+    </div>
+
+  );
+};
+
+export default BannerCarousel;
