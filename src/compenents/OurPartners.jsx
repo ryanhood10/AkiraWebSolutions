@@ -6,6 +6,7 @@ import FuzzEraserLogo from './assets/partnerLogos/FuzzEraserLogo2.png';
 import VincentPeachLogo from './assets/partnerLogos/VincentPeachLogo.png';
 import KroegerRealEstateLogo from './assets/partnerLogos/KroegerRealEstateLogo.jpeg';
 import PMTsiteLogo from './assets/partnerLogos/PMTsiteLogo.png';
+import NashTrash from './assets/partnerLogos/NashTrashLogo.png'
 
 const partnerLogos = [
     BondsSouthEastIncLogo,
@@ -16,24 +17,25 @@ const partnerLogos = [
     PMTsiteLogo,
     BitcoinBayLogo, BondsSouthEastIncLogo,
     CreativeColoringLogo,
+    NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
     KroegerRealEstateLogo,
     PMTsiteLogo,
     BitcoinBayLogo, BondsSouthEastIncLogo,
-    CreativeColoringLogo,
+    CreativeColoringLogo,    NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
     KroegerRealEstateLogo,
     PMTsiteLogo,
     BitcoinBayLogo, BondsSouthEastIncLogo,
-    CreativeColoringLogo,
+    CreativeColoringLogo, NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
     KroegerRealEstateLogo,
     PMTsiteLogo,
     BitcoinBayLogo, BondsSouthEastIncLogo,
-    CreativeColoringLogo,
+    CreativeColoringLogo, NashTrash,
     FuzzEraserLogo,
     VincentPeachLogo,
     KroegerRealEstateLogo,

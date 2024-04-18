@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import KroegerRealEstate from "./assets/pictures/KroegerRealEstate.png";
+import KroegerRealEstate from "./assets/pictures/KroegerPic.png";
 import BitcoinBayBot from "./assets/pictures/BitcoinBayBot.png";
 import SeaverMarketing1 from "./assets/pictures/SeaverMarketing1.png";
 import KroegerRealEstate2 from "./assets/pictures/KroegerRealEstate2.png";
