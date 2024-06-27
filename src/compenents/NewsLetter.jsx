@@ -159,6 +159,7 @@ const NewsLetter = () => {
               </div>
             ))}
             <button
+            aria-label="submit info"
               type="submit"
               className="w-full bg-red-600 hover:bg-red-700 rounded-md  py-3 text-white transition duration-300 ease-in-out"
             >

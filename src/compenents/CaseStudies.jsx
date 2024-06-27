@@ -27,6 +27,7 @@ const CaseStudies = () => {
             </span>
             <div className="items-center">
               <button
+              aria-label="View Contact Info"
                 onClick={handleViewContact}
                 className="bg-[#FF0033] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:bg-purple-400"
               >

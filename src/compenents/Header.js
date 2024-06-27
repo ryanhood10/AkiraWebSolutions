@@ -34,12 +34,12 @@ const Header = () => {
           >
             Solutions
           </Link>
-          <Link
+          {/* <Link
             className="text-black hover:text-red-700 px-3 py-2 rounded-md text-md font-medium"
             to="/Pricing"
           >
             Pricing
-          </Link>
+          </Link> */}
           <Link
             className="text-black hover:text-red-700 px-3 py-2 rounded-md text-md font-medium"
             to="/CaseStudies"
@@ -54,7 +54,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="md:hidden">
-          <button onClick={handleNav}>
+          <button  aria-label="View Navigation" onClick={handleNav}>
             {nav ? (
               <XIcon className="h-8 w-8 text-black" />
             ) : (
@@ -84,13 +84,13 @@ const Header = () => {
         >
           Solutions
         </Link>
-        <Link
+        {/* <Link
           className="text-black hover:text-red-700"
           to="/Pricing"
           onClick={() => setNav(false)}
         >
           Pricing
-        </Link>
+        </Link> */}
         <Link
           className="text-black hover:text-red-700"
           to="/CaseStudies"

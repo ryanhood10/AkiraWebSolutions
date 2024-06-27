@@ -40,6 +40,7 @@ const WatsonAssistantLoader = () => {
       } transition-opacity duration-300`}
     >
       <button
+                    aria-label="Talk to AI Assistant"
         onClick={handleOpenChat}
         className="bg-gray-200 hover:bg-red-600 text-black font-bold py-2 px-4 rounded"
       >

@@ -79,7 +79,7 @@ function Contact() {
           {errors[field] && <span className="error">{errors[field]}</span>}
         </div>
       ))}
-      <button type="submit">Send</button>
+      <button aria-label='submit' type="submit">Send</button>
     </form>
   );
 }

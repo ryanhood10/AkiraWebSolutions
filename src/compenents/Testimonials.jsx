@@ -6,6 +6,7 @@ import KroegerRealEstate2 from "./assets/pictures/KroegerRealEstate2.png";
 import PMTwebsite from "./assets/pictures/PMTwebsite.png";
 import TrashHaul from "./assets/pictures/NashTrashHaul.png";
 
+
 const Modal = ({ image, title, content, onClose }) => (
   <div className="fixed inset-0 flex items-center justify-center z-50">
     <div
@@ -17,7 +18,8 @@ const Modal = ({ image, title, content, onClose }) => (
     >
       <h2 className="text-2xl mb-2">{title}</h2>
       <p className="text-lg">{content}</p>
-      <button onClick={onClose} className="absolute top-2 right-2 text-2xl">
+      <button onClick={onClose}               aria-label="Close"
+ className="absolute top-2 right-2 text-2xl">
         &times;
       </button>
     </div>

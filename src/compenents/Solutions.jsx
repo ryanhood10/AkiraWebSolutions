@@ -144,6 +144,7 @@ const Solutions = () => {
                 excellence.
               </p>
               <button
+              aria-label="View Contact Info"
                 onClick={handleViewContact}
                 className="bg-[#FF0033] rounded-md font-medium py-3 px-6 text-white hover:bg-red-700 transition duration-300"
               >
@@ -181,6 +182,7 @@ const Solutions = () => {
                 soar on the internet.
               </p>
               <button
+                            aria-label="View Contact Info"
                 onClick={handleViewContact}
                 className="bg-[#FF0033] rounded-md font-medium py-3 px-6 text-white hover:bg-red-700 transition duration-300"
               >
@@ -219,6 +221,7 @@ const Solutions = () => {
                 incorporating essential website features.
               </p>
               <button
+                            aria-label="View Contact Info"
                 onClick={handleViewContact}
                 className="bg-[#FF0033] rounded-md font-medium py-3 px-6 text-white hover:bg-red-700 transition duration-300"
               >

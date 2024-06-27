@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import BitcoinBayLogo from './assets/partnerLogos/bitcoinbayLogo.webp';
-import BondsSouthEastIncLogo from './assets/partnerLogos/BondsSouthEastInc_SmallLogo.png';
-import CreativeColoringLogo from './assets/partnerLogos/creativeColoringLogo.png';
-import FuzzEraserLogo from './assets/partnerLogos/FuzzEraserLogo2.png';
-import VincentPeachLogo from './assets/partnerLogos/VincentPeachLogo.png';
-import KroegerRealEstateLogo from './assets/partnerLogos/KroegerRealEstateLogo.jpeg';
-import PMTsiteLogo from './assets/partnerLogos/PMTsiteLogo.png';
-import NashTrash from './assets/partnerLogos/NashTrashLogo.png';
-import IBMLogo from './assets/partnerLogos/IBMLogo.png';
-import ShopLogo from './assets/partnerLogos/ShopifyPart.png';
+import BondsSouthEastIncLogo from './assets/partnerLogos/BondsSouthEastInc_SmallLogo.webp';
+import CreativeColoringLogo from './assets/partnerLogos/creativeColoringLogo.webp';
+import FuzzEraserLogo from './assets/partnerLogos/FuzzEraserLogo2.webp';
+import VincentPeachLogo from './assets/partnerLogos/VincentPeachLogo.webp';
+import KroegerRealEstateLogo from './assets/partnerLogos/KroegerRealEstateLogo.webp';
+import PMTsiteLogo from './assets/partnerLogos/PMTsiteLogo.webp';
+import NashTrash from './assets/partnerLogos/NashTrashLogo.webp';
+import IBMLogo from './assets/partnerLogos/IBMLogo.webp';
+import ShopLogo from './assets/partnerLogos/ShopifyPart.webp';
 
 const partnerLogos = [
     BondsSouthEastIncLogo,

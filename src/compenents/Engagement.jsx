@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AkiraLogo from "./assets/pictures/Icons/AkiraLogoTransparent.webp";
 import LaptopIcon from "./assets/pictures/Icons/laptopicon.webp";
 import SearchEngine from "./assets/pictures/Icons/searchicon.webp";
-import Ecommerce from "./assets/partnerLogos/ShopifyLogoBlack.png";
+import Ecommerce from "./assets/partnerLogos/ShopifyLogoBlack.webp";
 
 const Engagement = () => {
   const navigate = useNavigate();
@@ -153,6 +153,7 @@ const Engagement = () => {
             </div>
             <div className="flex justify-center items-center">
             <button
+            aria-label="Learn More"
             onClick={handleViewSolutions}
             style={{ marginTop: "40px" }}
             className="bg-red-500 hover:bg-red-600 text-white  py-2 px-6 rounded-lg transition duration-300 mx-auto "

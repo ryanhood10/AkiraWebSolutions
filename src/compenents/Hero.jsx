@@ -37,6 +37,7 @@ const Hero = () => {
           Nashville's Solution to SEO, E-commerce, Web Design, and AI 
         </p>
         <button
+        aria-label="View Contact Information"
           onClick={handleViewContact}
           className="mt-6 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded transition duration-300"
         >

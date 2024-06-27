@@ -74,6 +74,7 @@ const HeadlineCards = () => {
             Application Development
           </p>
           <button
+          aria-label="View Solutions"
             onClick={handleViewSolutions}
             className="self-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
           >
@@ -108,6 +109,7 @@ const HeadlineCards = () => {
             Increased Visibility with SEO
           </p>
           <button
+          aria-label="View Testimonials"
             onClick={handleViewTestimonials}
             className="self-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
           >
