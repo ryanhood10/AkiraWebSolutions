@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import KroegerRealEstate from "./assets/pictures/KroegerPic.png";
+import BondsSoutheast1 from "./assets/pictures/BondsSoutheastHomepage.png";
 import BitcoinBayBot from "./assets/pictures/BitcoinBayBot.png";
 import SeaverMarketing1 from "./assets/pictures/SeaverMarketing1.png";
-import KroegerRealEstate2 from "./assets/pictures/KroegerRealEstate2.png";
+// import BondsSoutheast2 from "./assets/pictures/BondsSoutheastPage2.png";
 import PMTwebsite from "./assets/pictures/PMTwebsite.png";
 import TrashHaul from "./assets/pictures/NashTrashHaul.png";
 
@@ -33,7 +33,7 @@ const CaseStudies = () => {
   const getImageForModal = (study) => {
     switch (study) {
       case "kroeger":
-        return KroegerRealEstate;
+        return BondsSoutheast1;
       case "bitcoinbay":
         return BitcoinBayBot;
       case "seaver":
@@ -53,37 +53,39 @@ const CaseStudies = () => {
         return (
           <>
             <img
-              src={KroegerRealEstate}
-              alt="Kroeger Real Estate Website Redesign"
-              className="w-auto rounded mb-4 py-4"
-            />
-            <img
-              src={KroegerRealEstate2}
-              alt="Kroeger Real Estate Website Redesign 2"
+              src={BondsSoutheast1}
+              alt="Bonds Southeast Website Redesign"
               className="w-auto rounded mb-4 py-4"
             />
             <h2 className="text-1xl  mb-2">
-              Kroeger Real Estate: A Modern Transformation
+              Bonds Southeast Inc: A Modern Transformation
             </h2>
             <p className="text-1xl">
-              In 2023, we revitalized the Kroeger Real Estates website, bringing
-              it to the forefront of modern design. The last update in 2014 left
-              it lagging behind current trends. Our redesign focused on user
+              In 20234, we revitalized Bonds Southeast Inc's website, bringing
+              it to the forefront of modern design. The last update from years ago left
+              it lagging behind current trends, and no longer scoring high on Google's Search Ranking.
+              Our redesign focused on user
               experience, mobile responsiveness, and SEO-optimized content. The
               result? A site that not only looks contemporary but also drives
               more organic traffic and engages users effectively. This
-              transformation ensures Kroeger Real Estates stands out in today's
-              competitive real estate market.
+              transformation ensures Bonds Southeast Inc stands out in today's
+              competitive bonds market.
             </p>
             <br></br>
             <p>
               <a
-                href="https://kroeger-real-estate-ee7b62451f9f.herokuapp.com/"
+                href="https://bondssoutheast.com/"
                 className="hover:underline text-blue-500"
               >
                 Click Here to See Their Website!{" "}
               </a>{" "}
             </p>
+            {/* <img
+              src={BondsSoutheast2}
+              alt="Bonds Southeast Website Redesign 2"
+              className="w-auto rounded mb-4 py-4"
+            /> */}
+
           </>
         );
       case "bitcoinbay":
@@ -254,7 +256,7 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: "kroeger",
-      image: KroegerRealEstate,
+      image: BondsSoutheast1,
       alt: "Kroeger Real Estate Website Redesign",
       title: "Kroeger Real Estate: A Modern Transformation",
       description:
